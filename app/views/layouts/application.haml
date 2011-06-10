@@ -1,7 +1,7 @@
 !!!
 %html
   %head
-  %title Teaterfred
+  %title Teaterforeningen Fredensborg Kommune
   = stylesheet_link_tag "application"
   = javascript_include_tag "application"
   = javascript_include_tag '//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js', '//ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js'
@@ -9,5 +9,24 @@
 
   %body
 
-    = yield
+  .container
+
+    #header
+      = render 'layouts/header'
+
+    %section
+
+      #menu
+        = render 'layouts/menu'
+
+      #main_content
+
+        = yield
+
+      #side_content
+        = render 'layouts/side_content'
+
+
+
+    = render 'layouts/footer'
 

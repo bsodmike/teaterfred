@@ -1,0 +1,41 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  margin: auto;
+  width: 1024px;
+  height: 768px;
+
+  #header {
+    height: 100px;
+
+    #logo {
+      width: 150px;
+      height: 170px;
+      float: right;
+    }
+  }
+
+  section {
+
+    #menu {
+      float: left;
+
+      ul {
+        list-style: none;
+      }
+    }
+
+    #main_content {
+      float: left;
+      width: 400px;
+      margin-right: 20px;
+    }
+    
+    #side_content {
+      float: left;
+    }
+  }
+  
+}
