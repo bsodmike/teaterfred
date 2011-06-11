@@ -21,9 +21,9 @@ ActiveRecord::Schema.define(:version => 20110610212144) do
   create_table "images", :force => true do |t|
     t.string   "title"
     t.string   "image"
-    t.integer  "gallery_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "gallery_id"
   end
 
 end

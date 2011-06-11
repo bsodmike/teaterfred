@@ -8,8 +8,8 @@
         - @gallery.errors.full_messages.each do |msg|
           %li= msg
   .field
-    = f.label :title
+    = f.label :name
     %br/
-    = f.text_field :title
+    = f.text_field :name
   .actions
     = f.submit

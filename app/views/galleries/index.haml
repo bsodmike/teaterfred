@@ -1,13 +1,13 @@
 %h1 Listing galleries
 %table
   %tr
-    %th Title
+    %th Name
     %th
     %th
     %th
   - @galleries.each do |gallery|
     %tr
-      %td= gallery.title
+      %td= gallery.name
       %td= link_to 'Show', gallery
       %td= link_to 'Edit', edit_gallery_path(gallery)
       %td= link_to 'Destroy', gallery, confirm: 'Are you sure?', method: :delete

@@ -1,4 +1,6 @@
 Teaterfred::Application.routes.draw do
+  resources :places
+
   resources :images
 
   resources :galleries
