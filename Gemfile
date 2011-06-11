@@ -14,6 +14,7 @@ gem 'blueprint-rails'
 gem 'coffee-script'
 gem 'uglifier'
 gem 'haml'
+gem 'execjs'
 
 gem 'jquery-rails'
 
