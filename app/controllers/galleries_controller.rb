@@ -1,4 +1,6 @@
 class GalleriesController < ApplicationController
+  before_filter :current_user
+
   # GET /galleries
   # GET /galleries.json
   def index
