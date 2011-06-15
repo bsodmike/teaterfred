@@ -1,2 +1,17 @@
-.span-12
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+- @news.each do |news|
+  .span-10
+    .span-5{:style => "float:left;"}
+      = image_tag "/images/alder_ingen_hindring.jpg", :width => 180, :height => 150
+      /= image_tag "/images/#{news.image}"
+
+    .span-4{:style => "float:left;"}
+      %strong= news.title
+      %br/
+      = news.created_at
+      \-
+      = news.place
+      %br/
+      %br/
+      = news.content
+
+    %br/
