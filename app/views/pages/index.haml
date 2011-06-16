@@ -12,6 +12,7 @@
       = news.place
       %br/
       %br/
-      = news.content
+      = truncate news.content, :length => 90
+      = link_to 'læs mere', news
 
     %br/

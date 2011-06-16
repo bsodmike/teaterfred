@@ -9,7 +9,7 @@
   %li
     %u Billetter
   %ul
-    %li Bliv medlem
+    %li= link_to 'Bliv medlem', become_member_path
     %li Priser og rabatter
     %li Billetter i løssalg
 
@@ -38,4 +38,4 @@
   %li
     %u= link_to 'Galleri', galleries_path
   %li
-    %u Kontakt
+    %u= link_to 'Kontakt', contact_path

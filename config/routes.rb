@@ -1,12 +1,19 @@
 Teaterfred::Application.routes.draw do
 
-  resources :news
+  resources :partners
 
+  resources :news
   resources :places
   resources :images
   resources :galleries
   resources :users
   resources :sessions
+
+  match '/contact', :to => 'pages#contact'
+
+  # TICKETS
+  #match '/tickets', :to => ''
+  match '/become_member', :to => 'pages#become_member'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
