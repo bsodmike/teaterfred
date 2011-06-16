@@ -4,7 +4,6 @@
     <list default="true" id="fbf65656-8dfe-4ae5-9523-e01985bcc69f" name="Default" comment="">
       <change type="DELETED" beforePath="C:\Users\Daniel\teaterfred\app\assets\images\rails.png" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Daniel\teaterfred\app\assets\stylesheets\main.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Daniel\teaterfred\app\assets\stylesheets\scaffolds.css.scss" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Daniel\teaterfred\app\views\layouts\application.html.erb" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Daniel\teaterfred\public\favicon.ico" afterPath="" />
     </list>
@@ -160,26 +159,8 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="teaterfred" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="teaterfred" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stylesheets" />
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -194,10 +175,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
