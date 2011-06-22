@@ -12,6 +12,7 @@ gem 'coffee-script'
 gem 'uglifier'
 gem 'haml'
 gem 'sprockets', "2.0.0.beta.10"
+gem 'tiny_mce'
 
 gem 'jquery-rails'
 

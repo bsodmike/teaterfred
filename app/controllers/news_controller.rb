@@ -1,5 +1,6 @@
 class NewsController < ApplicationController
   respond_to :html, :xml, :json
+  uses_tiny_mce
 
   def index
     respond_with(@news = News.all)

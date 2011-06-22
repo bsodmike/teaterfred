@@ -10,6 +10,11 @@ Teaterfred::Application.routes.draw do
   resources :sessions
 
   match '/contact', :to => 'pages#contact'
+  match '/admin', :to => 'pages#admin'
+
+  # SESSIONS
+  match '/signin', :to => 'sessions#new'
+  match '/signout', :to => 'sessions#destroy'
 
   # TICKETS
   #match '/tickets', :to => ''

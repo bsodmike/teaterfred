@@ -1,8 +1,14 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  #force_ssl
+  force_ssl
   
   private
+
+  def signed_in_user
+    if current_user.nil?
+      redirect_to signin_path, :notice => "Please sign in to access this page"
+    end
+  end
 
   def current_user
     @current_user ||= User.find(session[:user_id]) if session[:user_id]

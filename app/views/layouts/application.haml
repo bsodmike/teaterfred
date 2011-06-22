@@ -5,6 +5,7 @@
   = stylesheet_link_tag "application"
   = javascript_include_tag "application"
   = javascript_include_tag '//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js', '//ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js'
+  = include_tiny_mce_if_needed
   = csrf_meta_tags
 
   %body
@@ -30,3 +31,10 @@
 
     = render 'layouts/footer'
 
+    = debug current_user
+
+    - if current_user
+      %ul
+        %li= link_to 'Profile', current_user
+        %li= link_to 'Settings', edit_user_path(current_user)
+        %li= link_to 'Signout', signout_path, :method => :delete
