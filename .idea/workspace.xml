@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fbf65656-8dfe-4ae5-9523-e01985bcc69f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
+      <change type="DELETED" beforePath="C:\Users\Daniel\teaterfred\Gemfile.lock" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/galleries_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/galleries_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/images_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/images_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/news_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/news_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/partners_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/partners_controller.rb" />
     </list>
     <ignored path="teaterfred.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,10 +27,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="19" selection-start="463" selection-end="463" vertical-scroll-proportion="0.5011792">
+            <state line="25" column="19" selection-start="463" selection-end="463" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gemfile.lock" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Gemfile.lock">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="40" selection-start="152" selection-end="152" vertical-scroll-proportion="-1.5058962">
               <folding />
             </state>
           </provider>
@@ -429,11 +433,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/_menu.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="50" selection-start="174" selection-end="174" vertical-scroll-proportion="0.22051887" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="3" selection-start="79" selection-end="79" vertical-scroll-proportion="0.04009434" />
@@ -520,7 +519,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="19" selection-start="463" selection-end="463" vertical-scroll-proportion="0.5011792">
+        <state line="25" column="19" selection-start="463" selection-end="463" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile.lock">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="40" selection-start="152" selection-end="152" vertical-scroll-proportion="-1.5058962">
           <folding />
         </state>
       </provider>
