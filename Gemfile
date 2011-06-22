@@ -11,7 +11,7 @@ gem 'blueprint-rails'
 gem 'coffee-script'
 gem 'uglifier'
 gem 'haml'
-gem 'sprockets'
+gem 'sprockets', "2.0.0.beta.10"
 
 gem 'jquery-rails'
 
@@ -26,4 +26,5 @@ gem 'carrierwave'
 group :development, :test do
   # Pretty printed test output
   gem 'turn', :require => false
+  gem 'sqlite3'
 end
