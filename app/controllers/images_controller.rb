@@ -1,25 +1,16 @@
 class ImagesController < ApplicationController
-  respond_to :html, :json
+  respond_to :html, :xml, :json
 
   def index
-    @images = Image.all
-
-    respond_with(@images)
+    respond_with(@images = Image.all)
   end
 
   def show
-    @image = Image.find(params[:id])
-
-    respond_with(@image)
+    respond_with(@image = Image.find(params[:id]))
   end
 
   def new
-    @image = Image.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @image }
-    end
+    respond_with(@image = Image.new)
   end
 
   def edit
@@ -57,7 +48,6 @@ class ImagesController < ApplicationController
   def destroy
     @image = Image.find(params[:id])
     @image.destroy
-
     respond_with(@image)
   end
 end

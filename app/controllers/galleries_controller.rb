@@ -1,20 +1,17 @@
 class GalleriesController < ApplicationController
-  respond_to :html, :json
+  respond_to :html, :xml, :json
   before_filter :current_user
 
   def index
-    @galleries = Gallery.all
-    respond_with(@galleries)
+    respond_with(@galleries = Gallery.all)
   end
 
   def show
-    @gallery = Gallery.find(params[:id])
-    respond_with(@gallery)
+    respond_with(@gallery = Gallery.find(params[:id]))
   end
 
   def new
-    @gallery = Gallery.new
-    respond_with(@gallery)
+    respond_with(@gallery = Gallery.new)
   end
 
   def edit
@@ -52,7 +49,6 @@ class GalleriesController < ApplicationController
   def destroy
     @gallery = Gallery.find(params[:id])
     @gallery.destroy
-
     respond_with(@gallery)
   end
 end

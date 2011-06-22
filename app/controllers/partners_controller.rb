@@ -1,44 +1,22 @@
 class PartnersController < ApplicationController
-  # GET /partners
-  # GET /partners.json
+  respond_to :html, :xml, :json
+
   def index
-    @partners = Partner.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @partners }
-    end
+    respond_with(@partners = Partner.all)
   end
 
-  # GET /partners/1
-  # GET /partners/1.json
   def show
-    @partner = Partner.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @partner }
-    end
+    respond_with(@partner = Partner.find(params[:id]))
   end
 
-  # GET /partners/new
-  # GET /partners/new.json
   def new
-    @partner = Partner.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @partner }
-    end
+    respond_with(@partner = Partner.new)
   end
 
-  # GET /partners/1/edit
   def edit
     @partner = Partner.find(params[:id])
   end
 
-  # POST /partners
-  # POST /partners.json
   def create
     @partner = Partner.new(params[:partner])
 
@@ -53,8 +31,6 @@ class PartnersController < ApplicationController
     end
   end
 
-  # PUT /partners/1
-  # PUT /partners/1.json
   def update
     @partner = Partner.find(params[:id])
 
@@ -69,15 +45,9 @@ class PartnersController < ApplicationController
     end
   end
 
-  # DELETE /partners/1
-  # DELETE /partners/1.json
   def destroy
     @partner = Partner.find(params[:id])
     @partner.destroy
-
-    respond_to do |format|
-      format.html { redirect_to partners_url }
-      format.json { head :ok }
-    end
+    respond_with(@partner)
   end
 end

@@ -1,19 +1,16 @@
 class NewsController < ApplicationController
-  respond_to :html, :json
+  respond_to :html, :xml, :json
 
   def index
-    @news = News.all
-    respond_with(@news)
+    respond_with(@news = News.all)
   end
 
   def show
-    @news = News.find(params[:id])
-    respond_with(@news)
+    respond_with(@news = News.find(params[:id]))
   end
 
   def new
-    @news = News.new
-    respond_with(@news)
+    respond_with(@news = News.new)
   end
 
   def edit
@@ -23,7 +20,8 @@ class NewsController < ApplicationController
   def create
     @news = News.new(params[:news])
 
-    respond_to do |format|
+
+    respond_with(@news) do |format|
       if @news.save
         format.html { redirect_to @news, notice: 'News was successfully created.' }
         format.json { render json: @news, status: :created, location: @news }

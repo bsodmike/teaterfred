@@ -6,8 +6,6 @@ gem 'rake', '0.8.7'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
-
 # Asset template engines
 gem 'sass-rails', "~> 3.1.0.rc"
 gem 'blueprint-rails'
@@ -25,7 +23,8 @@ gem 'carrierwave'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
-group :test do
+group :development, :test do
   # Pretty printed test output
   gem 'turn', :require => false
+  gem 'sqlite3'
 end
