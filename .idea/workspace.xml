@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fbf65656-8dfe-4ae5-9523-e01985bcc69f" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\Daniel\teaterfred\Gemfile.lock" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
     </list>
     <ignored path="teaterfred.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,7 +38,7 @@
       <file leaf-file-name="Gemfile.lock" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gemfile.lock">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="40" selection-start="152" selection-end="152" vertical-scroll-proportion="-1.5058962">
+            <state line="113" column="0" selection-start="2710" selection-end="2710" vertical-scroll-proportion="0.879717">
               <folding />
             </state>
           </provider>
@@ -83,6 +82,7 @@
         <option value="$PROJECT_DIR$/app/controllers/partners_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/news_controller.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/Gemfile.lock" />
       </list>
     </option>
   </component>
@@ -526,7 +526,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile.lock">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="40" selection-start="152" selection-end="152" vertical-scroll-proportion="-1.5058962">
+        <state line="113" column="0" selection-start="2710" selection-end="2710" vertical-scroll-proportion="0.879717">
           <folding />
         </state>
       </provider>

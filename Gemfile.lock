@@ -111,15 +111,3 @@ GEM
 PLATFORMS
   x86-mingw32
 
-DEPENDENCIES
-  blueprint-rails
-  carrierwave
-  coffee-script
-  haml
-  jquery-rails
-  rails (= 3.1.0.rc4)
-  rake (= 0.8.7)
-  sass-rails (~> 3.1.0.rc)
-  sqlite3
-  turn
-  uglifier
