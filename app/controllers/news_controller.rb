@@ -35,7 +35,7 @@ class NewsController < ApplicationController
   def update
     @news = News.find(params[:id])
 
-    respond_to do |format|
+    respond_with(@news) do |format|
       if @news.update_attributes(params[:news])
         format.html { redirect_to @news, notice: 'News was successfully updated.' }
         format.json { head :ok }
