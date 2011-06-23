@@ -1,31 +1,25 @@
-<h1>Listing places</h1>
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Address</th>
-    <th>Phone</th>
-    <th>Email</th>
-    <th>Link</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @places.each do |place| %>
-  <tr>
-    <td><%= place.name %></td>
-    <td><%= place.address %></td>
-    <td><%= place.phone %></td>
-    <td><%= place.email %></td>
-    <td><%= place.link %></td>
-    <td><%= link_to 'Show', place %></td>
-    <td><%= link_to 'Edit', edit_place_path(place) %></td>
-    <td><%= link_to 'Destroy', place, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Place', new_place_path %>
+%h1 Listing places
+%table
+  %tr
+    %th Name
+    %th Address
+    %th Phone
+    %th Email
+    %th Link
+    %th
+    %th
+    %th
+  - @places.each do |place|
+    %tr
+      %td= place.name
+      %td= place.address
+      %td= place.phone
+      %td= place.email
+      %td= place.link
+      - if current_user
+        %td= link_to 'Show', place
+        %td= link_to 'Edit', edit_place_path(place)
+        %td= link_to 'Destroy', place, confirm: 'Are you sure?', method: :delete
+%br/
+- if current_user
+  = link_to 'New Place', new_place_path

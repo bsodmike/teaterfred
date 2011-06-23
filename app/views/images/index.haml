@@ -1,4 +1,4 @@
-%h1 Listing images
+%h3 Billeder
 %table
   %tr
     %th Title
@@ -9,8 +9,10 @@
     %tr
       %td= image.title
       %td= image.try(:gallery).try(:name)
-      %td= link_to 'Show', image
-      %td= link_to 'Edit', edit_image_path(image)
-      %td= link_to 'Destroy', image, confirm: 'Are you sure?', method: :delete
+      - if current_user
+        %td= link_to 'Show', image
+        %td= link_to 'Edit', edit_image_path(image)
+        %td= link_to 'Destroy', image, confirm: 'Are you sure?', method: :delete
 %br/
-= link_to 'New Image', new_image_path
+- if current_user
+  = link_to 'New Image', new_image_path

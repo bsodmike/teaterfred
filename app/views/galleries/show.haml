@@ -4,10 +4,17 @@
   = @gallery.name
   %p
 
-  - @gallery.images.each do |gallery|
-    = gallery.id
-    = gallery.title
-    = image_tag gallery.image, :width => 100, :height => 100
+  %table
+    %tr
+      %th ID
+      %th Navn
+      %th Billede
+
+    - @gallery.images.each do |gallery|
+      %tr
+        %td= gallery.id
+        %td= gallery.title
+        %td= image_tag gallery.image, :width => 100, :height => 100, :class => "image_box"
 
   = link_to 'Edit', edit_gallery_path(@gallery)
   |

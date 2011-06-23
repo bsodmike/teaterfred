@@ -1,4 +1,4 @@
-%h1 Listing galleries
+%h3 Billeder
 %table
   %tr
     %th Name
@@ -8,8 +8,10 @@
   - @galleries.each do |gallery|
     %tr
       %td= gallery.name
-      %td= link_to 'Show', gallery
-      %td= link_to 'Edit', edit_gallery_path(gallery)
-      %td= link_to 'Destroy', gallery, confirm: 'Are you sure?', method: :delete
+      - if current_user
+        %td= link_to 'Show', gallery
+        %td= link_to 'Edit', edit_gallery_path(gallery)
+        %td= link_to 'Destroy', gallery, confirm: 'Are you sure?', method: :delete
 %br/
-= link_to 'New Gallery', new_gallery_path
+- if current_user
+  = link_to 'New Gallery', new_gallery_path
