@@ -8,8 +8,7 @@ class GalleriesController < ApplicationController
   end
 
   def show
-    @gallery = Gallery.find(params[:id])
-    respond_with(@gallery)
+    respond_with(@gallery = Gallery.find(params[:id]))
   end
 
   def new

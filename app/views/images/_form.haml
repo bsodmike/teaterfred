@@ -14,7 +14,9 @@
   .field
     = f.label :gallery_id
     %br/
-    = f.text_field :gallery_id
+    %select
+      - @gallery.each do |gallery|
+        %option{:value => gallery.id}= gallery.name
   .field
     = f.label :image
     %br/

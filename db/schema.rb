@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(:version => 20110622184800) do
     t.string   "image"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "gallery_id"
   end
 
   create_table "news", :force => true do |t|

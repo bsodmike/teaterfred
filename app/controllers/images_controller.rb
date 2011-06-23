@@ -3,8 +3,7 @@ class ImagesController < ApplicationController
   respond_to :html, :xml, :json
 
   def index
-    @images = Image.all
-    respond_with(@images)
+    respond_with(@images = Image.all)
   end
 
   def show
@@ -12,7 +11,9 @@ class ImagesController < ApplicationController
   end
 
   def new
-    respond_with(@image = Image.new)
+    @image = Image.new
+    @gallery = Gallery.all
+    respond_with(@image, @gallery)
   end
 
   def edit
