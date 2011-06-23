@@ -1,8 +1,10 @@
 class ImagesController < ApplicationController
+  before_filter :signed_in_user, :only => [:new, :create, :edit, :update, :destroy]
   respond_to :html, :xml, :json
 
   def index
-    respond_with(@images = Image.all)
+    @images = Image.all
+    respond_with(@images)
   end
 
   def show
@@ -19,30 +21,14 @@ class ImagesController < ApplicationController
 
   def create
     @image = Image.new(params[:image])
-
-    respond_to do |format|
-      if @image.save
-        format.html { redirect_to @image, notice: 'Image was successfully created.' }
-        format.json { render json: @image, status: :created, location: @image }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @image.errors, status: :unprocessable_entity }
-      end
-    end
+    flash[:notice] = "Image successfully created" if @image.save
+    respond_with(@image)
   end
 
   def update
     @image = Image.find(params[:id])
-
-    respond_to do |format|
-      if @image.update_attributes(params[:image])
-        format.html { redirect_to @image, notice: 'Image was successfully updated.' }
-        format.json { head :ok }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @image.errors, status: :unprocessable_entity }
-      end
-    end
+    flash[:notice] = "Image updated successfully" if @image.update_attributes(params[:image])
+    respond_with(@image)
   end
 
   def destroy

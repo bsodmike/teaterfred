@@ -1,44 +1,23 @@
 class PlacesController < ApplicationController
-  # GET /places
-  # GET /places.json
+  before_filter :signed_in_user, :only => [:new, :create, :edit, :update, :destroy]
+  respond_to :html, :xml, :json
+
   def index
-    @places = Place.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @places }
-    end
+    respond_with(@places = Place.all)
   end
 
-  # GET /places/1
-  # GET /places/1.json
   def show
-    @place = Place.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @place }
-    end
+    respond_with(@place = Place.find(params[:id]))
   end
 
-  # GET /places/new
-  # GET /places/new.json
   def new
-    @place = Place.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @place }
-    end
+    respond_with(@place = Place.new)
   end
 
-  # GET /places/1/edit
   def edit
     @place = Place.find(params[:id])
   end
 
-  # POST /places
-  # POST /places.json
   def create
     @place = Place.new(params[:place])
 
@@ -53,8 +32,6 @@ class PlacesController < ApplicationController
     end
   end
 
-  # PUT /places/1
-  # PUT /places/1.json
   def update
     @place = Place.find(params[:id])
 
@@ -69,8 +46,6 @@ class PlacesController < ApplicationController
     end
   end
 
-  # DELETE /places/1
-  # DELETE /places/1.json
   def destroy
     @place = Place.find(params[:id])
     @place.destroy
