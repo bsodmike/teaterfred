@@ -18,6 +18,8 @@ gem 'jquery-rails'
 gem 'carrierwave'
 
 gem 'inherited_resources'
+gem 'execjs'
+gem 'therubyracer'
 
 # Deploy with Capistrano
 # gem 'capistrano'
