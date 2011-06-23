@@ -17,6 +17,8 @@ gem 'jquery-rails'
 
 gem 'carrierwave'
 
+gem 'inherited_resources'
+
 # Deploy with Capistrano
 # gem 'capistrano'
 

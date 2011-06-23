@@ -2,13 +2,13 @@
 %table
   %tr
     %th Title
-    %th
+    %th Gallery
     %th
     %th
   - @images.each do |image|
     %tr
       %td= image.title
-      %td= #image.gallery.name
+      %td= image.try(:gallery).try(:name)
       %td= link_to 'Show', image
       %td= link_to 'Edit', edit_image_path(image)
       %td= link_to 'Destroy', image, confirm: 'Are you sure?', method: :delete

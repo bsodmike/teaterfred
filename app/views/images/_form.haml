@@ -1,26 +1,16 @@
 = form_for @image, :html => {:multipart => true} do |f|
-  - if @image.errors.any?
-    #error_explanation
-      %h2
-        = pluralize(@image.errors.count, "error")
-        prohibited this image from being saved:
-      %ul
-        - @image.errors.full_messages.each do |msg|
-          %li= msg
-  .field
-    = f.label :title
-    %br/
-    = f.text_field :title
-  .field
-    = f.label :gallery_id
-    %br/
-    %select
-      - @gallery.each do |gallery|
-        %option{:value => gallery.id}= gallery.name
-  .field
-    = f.label :image
-    %br/
-    = f.file_field :image
-
-  .actions
-    = f.submit
+  = flash[:notice]
+  %table
+    %tr
+      %td= f.label :title
+      %td= f.text_field :title
+    %tr
+      %td= f.label :gallery_id
+      %td= f.select(:gallery_id, @gallery.map { |g| [g.name, g.id]}) # "maps" the @gallery instance variable, making it available
+    %tr
+      %td= f.label :image
+      %td= f.file_field :image
+    %tr
+      %td
+      %td
+        = f.submit
