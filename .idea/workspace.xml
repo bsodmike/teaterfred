@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fbf65656-8dfe-4ae5-9523-e01985bcc69f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/teaterfred_pages.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/pages/about/index.haml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/pages/about/regulations.haml" />
-      <change type="DELETED" beforePath="C:\Users\Daniel\teaterfred\app\models\pages.rb" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Daniel\teaterfred\app\views\pages\about\regulation.haml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Daniel\teaterfred\app\views\pages\become_member.haml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/main.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/main.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/pages_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/pages_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_menu.haml" afterPath="$PROJECT_DIR$/app/views/layouts/_menu.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pages/show.haml" afterPath="$PROJECT_DIR$/app/views/pages/show.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-    </list>
+    <list default="true" id="fbf65656-8dfe-4ae5-9523-e01985bcc69f" name="Default" comment="" />
     <ignored path="teaterfred.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
