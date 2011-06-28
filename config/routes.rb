@@ -8,22 +8,17 @@ Teaterfred::Application.routes.draw do
   resources :users
   resources :sessions
 
-  match '/contact', :to => 'pages#contact'
-  match '/admin', :to => 'pages#admin'
-
-  # SESSIONS
+  # SESSIONS - sign -in/out
   match '/signin', :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'
 
   # TICKETS
   #match '/tickets', :to => ''
-  match '/become_member', :to => 'pages#become_member'
 
 
   root :to => 'pages#index'
 
-
-  Pages.get_pages.each do |key, value|
+  TeaterfredPages.get_pages.each do |key, value|
     match key, :to => "pages#show"
   end
 end

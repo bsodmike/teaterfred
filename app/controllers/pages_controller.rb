@@ -19,7 +19,7 @@ class PagesController < ApplicationController
   end
 
   def show
-    @page = Pages.find_by_path(request.path)
+    @page = TeaterfredPages.find_by_path(request.path)
     @page_title = @page[:title]
 
     render @page[:template]
