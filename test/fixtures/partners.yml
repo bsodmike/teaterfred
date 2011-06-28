@@ -1,9 +1,0 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
-
-one:
-  image: MyString
-  link: MyString
-
-two:
-  image: MyString
-  link: MyString
