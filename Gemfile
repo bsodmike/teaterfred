@@ -12,7 +12,6 @@ gem 'sprockets', "2.0.0.beta.10"
 gem 'jquery-rails'
 # End
 
-gem 'therubyracer-heroku'
 
 gem 'carrierwave'
 
