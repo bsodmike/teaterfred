@@ -34,7 +34,84 @@ Place.create([
     }
 ])
 
+Gallery.create([
+    {
+        name: 'Alder ingen hindring',
+        place: 'Nivaa Bibliotek',
+    },
+    {
+        name: 'Sjov med ost',
+        place: 'Humlebaek Arena'
+    }
+])
+=begin
+Image.create([
+    {
+        title: 'fredensborg_globe',
+        image: 'fredensborg_globe.jpg',
+        gallery_id: 1
+    },
+    {
+        title: 'huset',
+        image: 'huset.jpg',
+        gallery_id: 1
+    },
+    {
+        title: 'fredensborg_globe',
+        image: 'fredensborg_globe.jpg',
+        gallery_id: 1
+    },
+    {
+        title: 'huset',
+        image: 'huset.jpg',
+        gallery_id: 1
+    },
+    {
+        title: 'fredensborg_globe',
+        image: 'fredensborg_globe.jpg',
+        gallery_id: 2
+    },
+    {
+        title: 'huset',
+        image: 'huset.jpg',
+        gallery_id: 2
+    },
+    {
+        title: 'fredensborg_globe',
+        image: 'fredensborg_globe.jpg',
+        gallery_id: 2
+    },
+    {
+        title: 'huset',
+        image: 'huset.jpg',
+        gallery_id: 2
+    }
+])
+=end
 Board.create([
     {
+        name: 'Test',
+        title: 'Blabla',
+        image: ''
+    },
+    {
+        name: 'Test',
+        title: 'Blabla',
+        image: ''
+    },
+    {
+        name: 'Test',
+        title: 'Blabla',
+        image: ''
+    },
+    {
+        name: 'Test',
+        title: 'Blabla',
+        image: ''
+    },
+    {
+        name: 'Test',
+        title: 'Blabla',
+        image: ''
     }
 ])

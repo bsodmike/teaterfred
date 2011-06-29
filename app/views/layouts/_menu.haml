@@ -1,54 +1,58 @@
-%ul
-  %li
-    = link_to 'Om os', '/about'
-    %ul.submenu
-      %li= link_to 'Bestyrelsen', '/board'
-      %li= link_to 'Vedtægter', '/regulations'
-      %li= link_to 'Samarbejdspartnere', partners_path
-
-  %li
-    = link_to 'Billetter'
-    %ul.submenu
-      %li= link_to 'Bliv medlem', '/become_member'
-      %li= link_to 'Priser og rabatter'
-      %li= link_to 'Billetter i løssalg'
-
-  %li
-    = link_to 'Program'
-    %ul.submenu
-      %li= link_to 'Voksenteater', '/adulttheater'
-      %li= link_to 'Børneteater', '/childtheater'
-      %li= link_to 'Gadeteater', '/streettheater'
-      %li= link_to 'Teaterture', '/theatertours'
-
-  %li
-    = link_to 'Spillesteder'
-    %ul.submenu
-      %li= link_to 'Fredensborg'
-      %ul
-        %li= link_to 'Fredensborg Bio'
+.menu
+  %ul
+    %li
+      = link_to 'Om os', '/about'
+      %ul.submenu
+        %li= link_to 'Bestyrelsen', '/board'
+        %li= link_to 'Vedtægter', '/regulations'
+        %li= link_to 'Samarbejdspartnere', partners_path
 
     %li
-      = link_to 'Humlebæk'
-      %ul
-        %li= link_to 'Humlebæk Bio'
+      = link_to 'Billetter'
+      %ul.submenu
+        %li= link_to 'Bliv medlem', '/become_member'
+        %li= link_to 'Priser og rabatter'
+        %li= link_to 'Billetter i løssalg'
 
-    %li= link_to 'Nivå'
-    %li= link_to 'Kokkedal'
-
-  %li
-    %u= link_to 'Galleri', galleries_path
-  %li
-    %u= link_to 'Kontakt', contact_path
-
-%br/
-%br/
-
-%ul
-  - if current_user
     %li
-      %b Admin
-    %li= link_to 'Billeder', images_path
-    %li= link_to 'Spillesteder', places_path
-    %li= link_to 'Nyheder', '/news'
-    %li= link_to 'Ny bruger', new_user_path
+      = link_to 'Program'
+      %ul.submenu
+        %li= link_to 'Voksenteater', '/adulttheater'
+        %li= link_to 'Børneteater', '/childtheater'
+        %li= link_to 'Gadeteater', '/streettheater'
+        %li= link_to 'Teaterture', '/theatertours'
+
+    %li
+      = link_to 'Spillesteder'
+      %ul.submenu
+        %li= link_to 'Fredensborg'
+        %ul
+          %li= link_to 'Fredensborg Bio'
+
+      %li
+        = link_to 'Humlebæk'
+        %ul
+          %li= link_to 'Humlebæk Bio'
+
+      %li= link_to 'Nivå'
+      %li= link_to 'Kokkedal'
+
+    %li
+      = link_to 'Galleri', galleries_path
+      %ul.submenu
+        - Gallery.all.each do |gallery|
+          %li= link_to gallery.name, gallery
+
+    %li= link_to 'Kontakt', contact_path
+
+  %br/
+  %br/
+
+  %ul
+    - if current_user
+      %li
+        %b Admin
+      %li= link_to 'Billeder', images_path
+      %li= link_to 'Spillesteder', places_path
+      %li= link_to 'Nyheder', '/news'
+      %li= link_to 'Ny bruger', new_user_path

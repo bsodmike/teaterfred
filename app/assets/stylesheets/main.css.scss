@@ -1,9 +1,16 @@
 a {
-  color: #000;
-  text-decoration: none;
+  color: #000 !important;
+  text-decoration: none !important;
+  background: none !important;
 }
-a:hover {
-  text-decoration: none;
+.menu a, .menu a:visited, .menu a:active {
+  color: #000 !important;
+  text-decoration: none !important;
+}
+.menu a:hover {
+  background: none !important;
+  color: #000 !important;
+  text-decoration: underline !important;
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -48,8 +55,12 @@ body {
       }
       li:hover {
         ul.submenu {
-          margin-left: 20px;
-          display: block;
+          float: right;
+          display: inline-block;
+
+          li {
+            display: block;
+          }
         }
       }
     }

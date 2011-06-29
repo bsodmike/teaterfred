@@ -2,19 +2,22 @@
 %table
   - @galleries.each do |gallery|
     %tr
-      %td
+      %td{:colspan => '4'}
         %h4= link_to gallery.name, gallery
+        = gallery.place
+        %br/
         = gallery.created_at
- 
+    %tr
     %tr
       - gallery.images.each do |image|
         %td= image_tag image.image, :width => 100, :height => 100, :class => "image_box"
+        
+        %td
+          - if current_user
+            = link_to 'Show', gallery
+            = link_to 'Edit', edit_gallery_path(gallery)
+            = link_to 'Destroy', gallery, confirm: 'Are you sure?', method: :delete
+    
 
-    - if current_user
-      %td= link_to 'Show', gallery
-      %td= link_to 'Edit', edit_gallery_path(gallery)
-      %td= link_to 'Destroy', gallery, confirm: 'Are you sure?', method: :delete
-      %br/
-      = link_to 'New Gallery', new_gallery_path
 
   
