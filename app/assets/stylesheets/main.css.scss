@@ -10,10 +10,18 @@ body {
   #header {
     height: 100px;
 
-    #logo {
+    #title {
+      /*font-family: */
+
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+    }
+
+    .logo img {
       width: 150px;
       height: 170px;
-      float: right;
     }
   }
 
