@@ -107,20 +107,15 @@
     <orderEntry type="library" scope="PROVIDED" name="[gem] ansi (v1.2.5, C:/Ruby192/lib/ruby/gems/1.9.1/gems/ansi-1.2.5)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] coffee-script-source (v1.1.1, C:/Ruby192/lib/ruby/gems/1.9.1/gems/coffee-script-source-1.1.1)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] blueprint-rails (v0.1.1, C:/Ruby192/lib/ruby/gems/1.9.1/gems/blueprint-rails-0.1.1)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] jquery-rails (v1.0.11, C:/Ruby192/lib/ruby/gems/1.9.1/gems/jquery-rails-1.0.11)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] bundler (v1.0.15, C:/Ruby192/lib/ruby/gems/1.9.1/gems/bundler-1.0.15)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] uglifier (v1.0.0, C:/Ruby192/lib/ruby/gems/1.9.1/gems/uglifier-1.0.0)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] execjs (v1.2.0, C:/Ruby192/lib/ruby/gems/1.9.1/gems/execjs-1.2.0)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] sass (v3.1.3, C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.3)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] rack (v1.3.0, C:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.3.0)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] tilt (v1.3.2, C:/Ruby192/lib/ruby/gems/1.9.1/gems/tilt-1.3.2)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] hike (v1.1.0, C:/Ruby192/lib/ruby/gems/1.9.1/gems/hike-1.1.0)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] sprockets (v2.0.0.beta.10, C:/Ruby192/lib/ruby/gems/1.9.1/gems/sprockets-2.0.0.beta.10)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] responders (v0.6.4, C:/Ruby192/lib/ruby/gems/1.9.1/gems/responders-0.6.4)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] inherited_resources (v1.2.2, C:/Ruby192/lib/ruby/gems/1.9.1/gems/inherited_resources-1.2.2)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] has_scope (v0.5.0, C:/Ruby192/lib/ruby/gems/1.9.1/gems/has_scope-0.5.0)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] libv8 (v3.3.10.2, C:/Ruby192/lib/ruby/gems/1.9.1/gems/libv8-3.3.10.2)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] therubyracer (v0.9.1, C:/Ruby192/lib/ruby/gems/1.9.1/gems/therubyracer-0.9.1)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] bundler (v1.0.14, C:/Ruby192/lib/ruby/gems/1.9.1/gems/bundler-1.0.14)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] uglifier (v0.5.4, C:/Ruby192/lib/ruby/gems/1.9.1/gems/uglifier-0.5.4)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] jquery-rails (v1.0.10, C:/Ruby192/lib/ruby/gems/1.9.1/gems/jquery-rails-1.0.10)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] hike (v1.0.0, C:/Ruby192/lib/ruby/gems/1.9.1/gems/hike-1.0.0)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] execjs (v1.1.3, C:/Ruby192/lib/ruby/gems/1.9.1/gems/execjs-1.1.3)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] sass (v3.1.2, C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.1.2)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] mail (v2.3.0, C:/Ruby192/lib/ruby/gems/1.9.1/gems/mail-2.3.0)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] erubis (v2.7.0, C:/Ruby192/lib/ruby/gems/1.9.1/gems/erubis-2.7.0)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] rack-test (v0.6.0, C:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-test-0.6.0)" level="application" />
@@ -138,6 +133,11 @@
     <orderEntry type="library" scope="PROVIDED" name="[gem] mime-types (v1.16, C:/Ruby192/lib/ruby/gems/1.9.1/gems/mime-types-1.16)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] rack-cache (v1.0.2, C:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-cache-1.0.2)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] i18n (v0.6.0, C:/Ruby192/lib/ruby/gems/1.9.1/gems/i18n-0.6.0)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] uglifier (v1.0.0, C:/Ruby192/lib/ruby/gems/1.9.1/gems/uglifier-1.0.0)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] inherited_resources (v1.2.2, C:/Ruby192/lib/ruby/gems/1.9.1/gems/inherited_resources-1.2.2)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] jquery-rails (v1.0.11, C:/Ruby192/lib/ruby/gems/1.9.1/gems/jquery-rails-1.0.11)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] responders (v0.6.4, C:/Ruby192/lib/ruby/gems/1.9.1/gems/responders-0.6.4)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] has_scope (v0.5.0, C:/Ruby192/lib/ruby/gems/1.9.1/gems/has_scope-0.5.0)" level="application" />
   </component>
 </module>
 
