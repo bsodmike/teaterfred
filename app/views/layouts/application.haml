@@ -20,7 +20,7 @@
         = render 'layouts/menu'
 
       #main_content
-
+        = link_to 'Tilbage'
         = yield
 
       #side_content
@@ -30,10 +30,10 @@
 
     = render 'layouts/footer'
 
-    = debug current_user
-
     - if current_user
       %ul
         %li= link_to 'Profile', current_user
         %li= link_to 'Settings', edit_user_path(current_user)
         %li= link_to 'Signout', signout_path, :method => :delete
+
+    = #debug current_user

@@ -33,3 +33,8 @@ Place.create([
         image: 'fredensborg_globe.jpg'
     }
 ])
+
+Board.create([
+    {
+    }
+])

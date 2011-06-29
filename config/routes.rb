@@ -1,5 +1,7 @@
 Teaterfred::Application.routes.draw do
 
+  resources :boards
+
   resources :partners
   resources :news
   resources :places

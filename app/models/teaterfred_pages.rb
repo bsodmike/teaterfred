@@ -21,6 +21,28 @@ class TeaterfredPages < ActiveRecord::Base
           :template => '/pages/tickets/become_member.haml'
       },
 
+      # Program/Program
+      '/program' => {
+          :title => 'Program',
+          :template => '/pages/program/index.haml'
+      },
+        '/adulttheater' => {
+            :title => 'Voksenteater',
+            :template => '/pages/program/adulttheater.haml'
+        },
+        '/childtheater' => {
+            :title => 'Boerneteater',
+            :template => '/pages/program/childtheater.haml'
+        },
+        '/streetthetater' => {
+            :title => 'Gadeteater',
+            :template => '/pages/program/streettheater.haml'
+        },
+        '/theatertours' => {
+            :title => 'Teater ture',
+            :template => '/pages/program/theatertours.haml'
+        },
+
       # Admin
       '/admin' => {
           :title => 'Admin',

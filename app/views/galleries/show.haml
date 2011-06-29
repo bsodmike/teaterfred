@@ -16,6 +16,7 @@
         %td= gallery.title
         %td= image_tag gallery.image, :width => 100, :height => 100, :class => "image_box"
 
-  = link_to 'Edit', edit_gallery_path(@gallery)
-  |
-  = link_to 'Back', galleries_path
+  - if current_user
+    = link_to 'Edit', edit_gallery_path(@gallery)
+    |
+    = link_to 'Back', galleries_path
