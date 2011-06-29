@@ -5,11 +5,6 @@
   %p
 
   %table
-    %tr
-      %th ID
-      %th Navn
-      %th Billede
-
     - @gallery.images.each do |gallery|
       %tr
         %td= gallery.id
