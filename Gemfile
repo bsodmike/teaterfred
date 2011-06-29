@@ -21,6 +21,7 @@ gem 'inherited_resources'
 
 group :production do
   gem 'therubyracer-heroku', '0.8.1.pre3'
+  gem 'pg'
 end
 
 group :development, :test do
