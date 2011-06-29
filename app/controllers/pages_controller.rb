@@ -13,4 +13,15 @@ class PagesController < ApplicationController
   def admin
     @page_title = 'Admin'
   end
+
+  def become_member
+    @page_title = 'Blid Medlem'
+  end
+
+  def show
+    @page = TeaterfredPages.find_by_path(request.path)
+    @page_title = @page[:title]
+
+    render @page[:template]
+  end
 end

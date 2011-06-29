@@ -1,39 +1,40 @@
 %ul
   %li
-    %u Om os
-  %ul
-    %li Bestyrelsen
-    %li Vedtægter
-    %li Samarbejdspartnere
+    = link_to 'Om os', '/about'
+    %ul.submenu
+      %li= link_to 'Bestyrelsen', '/board'
+      %li= link_to 'Vedtægter', '/regulations'
+      %li= link_to 'Samarbejdspartnere', partners_path
 
   %li
-    %u Billetter
-  %ul
-    %li= link_to 'Bliv medlem', become_member_path
-    %li Priser og rabatter
-    %li Billetter i løssalg
+    = link_to 'Billetter'
+    %ul.submenu
+      %li= link_to 'Bliv medlem', '/become_member'
+      %li= link_to 'Priser og rabatter'
+      %li= link_to 'Billetter i løssalg'
 
   %li
-    %u Program
-  %ul
-    %li Voksenteater
-    %li Børneteater
-    %li Gadeteater
-    %li Teaterture
+    = link_to 'Program'
+    %ul.submenu
+      %li= link_to 'Voksenteater'
+      %li= link_to 'Børneteater'
+      %li= link_to 'Gadeteater'
+      %li= link_to 'Teaterture'
 
   %li
-    %u Spillesteder
-  %ul
-    %li Fredensborg
-    %ul
-      %li Fredensborg Bio
+    = link_to 'Spillesteder'
+    %ul.submenu
+      %li= link_to 'Fredensborg'
+      %ul
+        %li= link_to 'Fredensborg Bio'
 
-    %li Humlebæk
-    %ul
-      %li Humlebæk Bio
+    %li
+      = link_to 'Humlebæk'
+      %ul
+        %li= link_to 'Humlebæk Bio'
 
-    %li Nivå
-    %li Kokkedal
+    %li= link_to 'Nivå'
+    %li= link_to 'Kokkedal'
 
   %li
     %u= link_to 'Galleri', galleries_path

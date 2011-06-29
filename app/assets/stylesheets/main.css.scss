@@ -23,8 +23,19 @@ body {
       float: left;
 
       ul {
-        list-style: none;
+        list-style-type: none;
       }
+      .submenu {
+        display: none;
+      }
+      li:hover {
+        ul.submenu {
+          margin-left: 20px;
+          display: block;
+        }
+
+      }
+
     }
 
     #main_content {
