@@ -9,8 +9,10 @@ gem 'coffee-script'
 gem 'uglifier'
 gem 'haml'
 gem 'sprockets', "2.0.0.beta.10"
-
 gem 'jquery-rails'
+# End
+
+gem 'therubyracer-heroku'
 
 gem 'carrierwave'
 
@@ -18,6 +20,9 @@ gem 'inherited_resources'
 
 
 
+group :production do
+  gem 'therubyracer-heroku', '0.8.1.pre3'
+end
 
 group :development, :test do
   gem 'turn', :require => false
