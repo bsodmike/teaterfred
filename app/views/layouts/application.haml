@@ -20,11 +20,11 @@
         = render 'layouts/menu'
 
       #main_content
-        = link_to 'Tilbage'
+        = link_to 'Tilbage', request.headers['HTTP_REFERER']
         = yield
 
       #side_content
-        = render 'layouts/side_content'
+        = #render 'layouts/side_content'
 
 
 

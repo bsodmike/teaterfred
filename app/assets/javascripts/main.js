@@ -1,6 +1,6 @@
 $(function() {
 
-  $("#calendar").datepicker();
+  //$("#calendar").datepicker();
 
   $(".image_box").fancybox();
   

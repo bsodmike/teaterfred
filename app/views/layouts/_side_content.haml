@@ -1,1 +1,16 @@
 #calendar
+  %h2#month
+    = link_to "<", :month => (@date.beginning_of_month-1).strftime("%Y-%m")
+    =h @date.strftime("%B %Y")
+    = link_to ">", :month => (@date.beginning_of_month+1).strftime("%Y-%m")
+    
+    = debug @events
+
+
+  - calendar_for (@events, :year => @date.year, :month => @date.month) do |t|
+    = #calendar.head('Sø', 'Ma', 'Ti', 'On', 'To', 'Fr', 'Lø')
+    - t.day do |date, events| #:day_method => :created_at
+      = date.day
+      %ul
+        - events.each do |event|
+          %li= link_to h(event.title), event
