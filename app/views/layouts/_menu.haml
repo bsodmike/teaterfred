@@ -8,7 +8,7 @@
         %li= link_to 'Samarbejdspartnere', partners_path
 
     %li
-      = link_to 'Billetter'
+      = link_to 'Billetter'#, tickets_path
       %ul.submenu
         %li= link_to 'Bliv medlem', '/become_member'
         %li= link_to 'Priser og rabatter'
@@ -26,16 +26,15 @@
       = link_to 'Spillesteder'
       %ul.submenu
         %li= link_to 'Fredensborg'
-        %ul
+        %ul.submenu
           %li= link_to 'Fredensborg Bio'
 
-      %li
-        = link_to 'Humlebæk'
-        %ul
+        %li= link_to 'Humlebæk'
+        %ul.submenu
           %li= link_to 'Humlebæk Bio'
 
-      %li= link_to 'Nivå'
-      %li= link_to 'Kokkedal'
+        %li= link_to 'Nivå'
+        %li= link_to 'Kokkedal'
 
     %li
       = link_to 'Galleri', galleries_path

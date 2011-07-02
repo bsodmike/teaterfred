@@ -18,6 +18,7 @@ gem 'carrierwave'
 gem 'inherited_resources'
 
 gem 'table_builder'
+gem 'calendar_helper'
 
 group :production do
   gem 'therubyracer-heroku', '0.8.1.pre3'

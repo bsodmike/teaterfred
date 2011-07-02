@@ -1,11 +1,11 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   force_ssl
-
-  @date = #params[:month] ? Time.parse(params[:month]) : Time.now
-  @event = Event.all
+  @events = Event.all
   
   private
+
+  
 
   def signed_in_user
     if current_user.nil?

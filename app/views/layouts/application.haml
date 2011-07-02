@@ -9,31 +9,30 @@
 
   %body
 
-  .container
+    .container
 
-    #header
-      = render 'layouts/header'
+      #header
+        = render 'layouts/header'
 
-    %section
+      %section
 
-      #menu
-        = render 'layouts/menu'
+        #menu
+          = render 'layouts/menu'
 
-      #main_content
-        = link_to 'Tilbage', request.headers['HTTP_REFERER']
-        = yield
+        #main_content
+          = link_to 'Tilbage', request.headers['HTTP_REFERER']
+          = yield
 
       #side_content
         = #render 'layouts/side_content'
 
+      #footer
+        = render 'layouts/footer'
 
+      - if current_user
+        %ul
+          %li= link_to 'Profile', current_user
+          %li= link_to 'Settings', edit_user_path(current_user)
+          %li= link_to 'Signout', signout_path, :method => :delete
 
-    = render 'layouts/footer'
-
-    - if current_user
-      %ul
-        %li= link_to 'Profile', current_user
-        %li= link_to 'Settings', edit_user_path(current_user)
-        %li= link_to 'Signout', signout_path, :method => :delete
-
-    = #debug current_user
+      = #debug current_user
