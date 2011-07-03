@@ -87,12 +87,10 @@ body {
         
         ul.submenu {
           font-size: 14px;
-          display: block;
+          display: inline-block;
           position: absolute;
           float: right;
-          clear: both;
-          background: grey;
-          margin-left: 10px;
+          margin-left: 40px;
           
           li {
             text-align: right;
