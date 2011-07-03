@@ -1,0 +1,36 @@
+/*.fc-grid .fc-day-content {display:none!important;}
+.fc-grid .fc-day-content div{display:none!important;}*/
+
+/*.fc-widget-content ,.fc-state-default{border:none!important}*/ /* disable grid borders */
+/*td.fc-widget-content{background:url(../img/calendar/calendarDateBg.png) no-repeat center top!important;color:#8B8E9B;font-size:17px;font-family:Arial, Helvetica, sans-serif;line-height:10px;}*/
+th.fc-state-default{height:20px;color:#000;font-family:Arial, Helvetica, sans-serif;font-size:12px;}
+/*td.fc-other-month div{color:#F6F7F7;background:none!important}*/
+.fc-grid .fc-day-number {float:left!important;padding:0!important;}
+td.fc-other-month .fc-day-content{color:#ECECEC} 
+.fc-header-title{font-family:Arial, Helvetica, sans-serif;text-align:center;font-size:12px;color:#000;text-transform:uppercase}
+td.has-event {background:url(../img/calendar/calendarDateBgRed.png) no-repeat center top!important;color:#000!important }
+.fc-grid .fc-day-content {padding:0px!important;float:none}
+/*.fc-today .fc-day-number{background:url(../img/calendar/calendarCurrentDateBg.png) no-repeat 5px 2px}*/
+.fc-event, .fc-agenda .fc-event-time, .fc-event a {border:none!important;background:none!important}
+.fc-event-title {color:#000;}
+
+.fc-event a {background:url(../img/calendar/eventDateIndicator.png) no-repeat scroll 24px 17px transparent !important;
+	height:43px!important;
+	left:-2px;
+	position:absolute!important;text-indent:-9999px;
+	top:-25px;width:42px!important;}
+
+/*td.hoverTd{background:url(../img/calendar/calendarDateBgBlue.png) no-repeat center top!important}*/
+/*.fc-grid .fc-other-month .fc-day-number {opacity:0!important;filter:alpha(opacity='0')!important;}*/ /* commented to show other-month days*/
+/* overriding default button styling*/
+.fc-state-default{border-width:0!important; background:none!important;}
+.fc-state-default .fc-button-effect span{display:none!important}
+.fc-button-inner{border:none!important; background:none!important;}
+.fc-button-content{color:transparent!important;line-height:0;}
+/* button styling*/
+.fc-button-prev span.fc-button-content{background:url(../img/calendar/calenderLeftArrow.png) no-repeat left center!important;border:none!important;text-indent:-9999px;width:8px;}	
+.fc-button-prev span.fc-button-content:hover{background:url(../img/calendar/calenderLeftArrowHover.png) no-repeat left center!important}
+.fc-button-prev  a{border:none!important}
+.fc-button-next span.fc-button-content{background:url(../img/calendar/calenderRightArrow.png) no-repeat left center!important;border:none!important;text-indent:-9999px;width:8px;}	
+.fc-button-next span.fc-button-content:hover{background:url(../img/calendar/calenderRightArrowHover.png) no-repeat left center!important;}
+.fc-button-next  a{border:none!important} 
