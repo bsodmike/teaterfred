@@ -3,16 +3,16 @@
 
 /*.fc-widget-content ,.fc-state-default{border:none!important}*/ /* disable grid borders */
 /*td.fc-widget-content{background:url(../img/calendar/calendarDateBg.png) no-repeat center top!important;color:#8B8E9B;font-size:17px;font-family:Arial, Helvetica, sans-serif;line-height:10px;}*/
-th.fc-state-default{height:20px;color:#FFF;font-family:Arial, Helvetica, sans-serif;font-size:12px;}
+th.fc-state-default{height:20px;color:#000;font-family:Arial, Helvetica, sans-serif;font-size:12px;}
 /*td.fc-other-month div{color:#F6F7F7;background:none!important}*/
-.fc-grid .fc-day-number {float:left!important;padding:0!important;font-weight:bold;}
+.fc-grid .fc-day-number {float:left!important;padding:0!important;}
 td.fc-other-month .fc-day-content{color:#ECECEC} 
 .fc-header-title{font-family:Arial, Helvetica, sans-serif;text-align:center;font-size:12px;color:#000;text-transform:uppercase}
-td.has-event {background:url(../img/calendar/calendarDateBgRed.png) no-repeat center top!important;color:#FFF!important }
+td.has-event {background:url(../img/calendar/calendarDateBgRed.png) no-repeat center top!important;color:#000!important }
 .fc-grid .fc-day-content {padding:0px!important;float:none}
 /*.fc-today .fc-day-number{background:url(../img/calendar/calendarCurrentDateBg.png) no-repeat 5px 2px}*/
 .fc-event, .fc-agenda .fc-event-time, .fc-event a {border:none!important;background:none!important}
-.fc-event-title {color:#fff;}
+.fc-event-title {color:#000;}
 
 .fc-event a {background:url(../img/calendar/eventDateIndicator.png) no-repeat scroll 24px 17px transparent !important;
 	height:43px!important;

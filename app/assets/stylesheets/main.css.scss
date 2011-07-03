@@ -44,72 +44,75 @@ body {
     height: 100%;
 
     #core {
-      margin: auto;
-      height: 600px;
-      min-width: 800px;
-    }
-    #main_content {
-      width: 800px;
-      min-height: 600px;
-      margin: auto;
-    }
-
-    .spacer {
-      width: 1px;
-      height: 100%;
-
-      #left {
-        float: left;
+      width: 100%;
+      #main_content {
+        width: 800px;
+        min-height: 600px;
+        margin: auto;
       }
-      #right {
-        float: right;
-      }
-    }
-    
-
-    #menu {
-      float: left;
-      margin-left: 20px;
-      margin-top: 20px;
-      padding: 0;
-
-      ul {
-        padding: 0;
-        font-size: 16px;
-        list-style-type: none;
-      }
-      .submenu {
-        display: none;
-      }
-      li:hover {
-        margin: 0;
-        padding: 0;
-        clear: both;
-        
-        ul.submenu {
-          font-size: 14px;
-          display: inline-block;
-          position: absolute;
+  
+      .spacer {
+        width: 1px;
+        height: 100%;
+  
+        #left {
+          float: left;
+        }
+        #right {
           float: right;
-          margin-left: 40px;
+        }
+      }
+      
+      /* MENU START */
+      #menu {
+        float: left;
+        margin-left: 20px;
+        margin-top: 20px;
+        padding: 0;
+  
+        ul {
+          padding: 0;
+          font-size: 16px;
+          list-style-type: none;
+        }
+        .submenu {
+          display: none;
+        }
+        li:hover {
+          margin: 0;
+          padding: 0;
+          clear: both;
           
-          li {
-            text-align: right;
+          ul.submenu {
+            font-size: 14px;
+            display: inline-block;
+            position: absolute;
+            float: right;
+            margin-left: 40px;
+            
+            li {
+              text-align: right;
+            }
+          }
+        }
+  
+        .admin_menu {
+          a {
+            font-size: 12px !important;
           }
         }
       }
-
-      .admin_menu {
-        a {
-          font-size: 12px !important;
+      /* MENU END */
+      
+      #side_content {
+        float: left;
+      
+        #calendar_wrapper {
+          width: 180px !important;
         }
       }
     }
   }
-
-  #side_content {
-      float: left;
-    }
 }
 #footer {
     text-align: center;
