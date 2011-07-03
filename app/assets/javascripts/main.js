@@ -8,7 +8,7 @@ $(function() {
   $('#calendar').fullCalendar({
       // see http://arshaw.com/fullcalendar/docs
       // for details.
-      events: '/feeds/events.json',
+      events: '/events.json',
       aspectRatio: 2,
       dayNamesShort:['S', 'M', 'T', 'W', 'T', 'F', 'S'] 
   })

@@ -5,5 +5,9 @@ class EventsController < InheritedResources::Base
   def index
     @events = Event.all
     @date = params[:month] ? Date.parse(params[:month]) : Date.today
+    respond_to do |format|
+      format.json  { render :json => @events.to_json(:only => [:id, :title, :start]) }
+    end  
   end
+  
 end
