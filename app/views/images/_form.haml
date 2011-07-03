@@ -2,15 +2,15 @@
   = flash[:notice]
   %table
     %tr
-      %td= f.label :title
+      %td= f.label :titel
       %td= f.text_field :title
     %tr
-      %td= f.label :gallery_id
+      %td= f.label :galleri
       %td= f.select(:gallery_id, @gallery.map { |g| [g.name, g.id]}) # "maps" the @gallery instance variable, making it available
     %tr
-      %td= f.label :image
+      %td= f.label :billede
       %td= f.file_field :image
     %tr
       %td
       %td
-        = f.submit
+        = f.submit 'Opret'

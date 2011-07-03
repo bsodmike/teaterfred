@@ -36,11 +36,11 @@ Place.create([
 
 Gallery.create([
     {
-        title: 'Alder ingen hindring',
+        name: 'Alder ingen hindring',
         place: 'Nivaa Bibliotek',
     },
     {
-        title: 'Sjov med ost',
+        name: 'Sjov med ost',
         place: 'Humlebaek Arena'
     }
 ])

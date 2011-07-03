@@ -8,12 +8,12 @@
         - @gallery.errors.full_messages.each do |msg|
           %li= msg
   .field
-    = f.label :name
+    = f.label :navn
     %br/
     = f.text_field :name
   .field
-    = f.label :place
+    = f.label :sted
     %br/
     = f.text_field :place
   .actions
-    = f.submit
+    = f.submit 'Opret'

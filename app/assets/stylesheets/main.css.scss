@@ -1,3 +1,5 @@
+tbody tr:nth-child(even) td, tbody tr.even td {background:none !important;}
+
 a {
   color: #000 !important;
   text-decoration: none !important;
@@ -14,13 +16,13 @@ a {
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: url('core/background.png') repeat-x;
+  background: url('core/background.png') repeat-x scroll 0 170px;
 }
 
 .container {
   padding: 0;
-  width: 100%;
   height: 100%;
+  background: url('core/background.png') repeat-x scroll 0 170px;
 
   #header {
     border-bottom: 1px solid #c2bd9f;
@@ -49,7 +51,6 @@ body {
     height: 100%;
 
     #core {
-      background: url('core/background.png') repeat-x;
       width: 100%;
       height: 600px;
     }
@@ -68,14 +69,14 @@ body {
 
     #menu {
       float: left;
-      margin-right: 100px;
+      margin-right: 50px;
       margin-top: 20px;
       padding: 0;
 
       ul {
+        pading: 0;
         font-size: 18px;
         list-style-type: none;
-        list-style: none;
       }
       .submenu {
         display: none;
@@ -83,18 +84,29 @@ body {
       li:hover {
         margin: 0;
         padding: 0;
+        clear: both;
+        
         ul.submenu {
-          
           font-size: 14px;
-          float: right;
           display: block;
           position: absolute;
+          float: right;
+          clear: both;
+          background: grey;
+          margin-left: 10px;
+          
           li {
-            margin-left: 15px;
             text-align: right;
-            display: block;
           }
         }
+      }
+
+      .admin_menu {
+        a {
+          font-size: 12px !important;
+        }
+
+
       }
     }
 
@@ -103,15 +115,17 @@ body {
       float: left;
       width: 500px;
       min-height: 600px;
+      margin-left: 20px;
     }
   }
 
   #side_content {
       float: left;
-      clear: both;
     }
 
-  #footer {
+  
+}
+#footer {
     text-align: center;
     height: 38px;
     width: 100% !important;
@@ -119,5 +133,6 @@ body {
     border-top: 1px solid #dedede;
     float: left;
     margin-bottom: 0;
+    padding-top: 5px;
+    font-size: 14px;
   }
-}

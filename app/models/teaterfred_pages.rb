@@ -20,6 +20,10 @@ class TeaterfredPages < ActiveRecord::Base
           :title => 'Bliv Medlem',
           :template => '/pages/tickets/become_member.haml'
       },
+      '/singlesale' => {
+          :title => 'Loessalg',
+          :template => '/pages/tickets/singlesale.haml'
+      },
 
       # Program/Program
       '/program' => {

@@ -5,7 +5,9 @@
     =h date.strftime("%B %Y")
     = link_to ">", :month => (date.beginning_of_month+1).strftime("%Y-%m")
     
-    = #debug Event.all
+    = debug Event.all
+    = debug @events
+    = debug events
 
   - calendar_for events, :year => date.year, :month => date.month do |t|
     =# t.head('Sø', 'Ma', 'Ti', 'On', 'To', 'Fr', 'Lø')

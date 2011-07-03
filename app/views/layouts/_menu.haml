@@ -6,14 +6,12 @@
         %li= link_to 'Bestyrelsen', '/board'
         %li= link_to 'Vedtægter', '/regulations'
         %li= link_to 'Samarbejdspartnere', partners_path
-
     %li
       = link_to 'Billetter'#, tickets_path
       %ul.submenu
         %li= link_to 'Bliv medlem', '/become_member'
         %li= link_to 'Priser og rabatter'
         %li= link_to 'Billetter i løssalg'
-
     %li
       = link_to 'Program'
       %ul.submenu
@@ -21,37 +19,50 @@
         %li= link_to 'Børneteater', '/childtheater'
         %li= link_to 'Gadeteater', '/streettheater'
         %li= link_to 'Teaterture', '/theatertours'
-
     %li
       = link_to 'Spillesteder'
       %ul.submenu
-        %li= link_to 'Fredensborg'
-        %ul.submenu
-          %li= link_to 'Fredensborg Bio'
-
-        %li= link_to 'Humlebæk'
-        %ul.submenu
-          %li= link_to 'Humlebæk Bio'
-
-        %li= link_to 'Nivå'
-        %li= link_to 'Kokkedal'
-
+        %li
+          = link_to 'Fredensborg'
+        %li
+          = link_to 'Humlebæk'
+        %li
+          = link_to 'Nivå'
+        %li
+          = link_to 'Kokkedal'
     %li
       = link_to 'Galleri', galleries_path
       %ul.submenu
         - Gallery.all.each do |gallery|
-          %li= link_to gallery.name, gallery
-
-    %li= link_to 'Kontakt', contact_path
+          %li
+            = link_to gallery.name, gallery
+    %li
+      = link_to 'Kontakt', contact_path
 
   %br/
   %br/
 
-  %ul
+  %ul.admin_menu
     - if current_user
       %li
         %b Admin
-      %li= link_to 'Billeder', images_path
-      %li= link_to 'Spillesteder', places_path
-      %li= link_to 'Nyheder', '/news'
-      %li= link_to 'Ny bruger', new_user_path
+      %li
+        = link_to 'Galleri', galleries_path
+        \-
+        = link_to 'Nyt galleri', new_gallery_path
+      %li
+        = link_to 'Billeder', images_path
+        \-
+        = link_to 'Nyt billede', new_image_path
+      %li
+        = link_to 'Spillesteder', places_path
+      %li
+        = link_to 'Nyheder', news
+        \-
+        = link_to 'Opret nyhed', new_news_path
+      %li
+        = link_to 'Ny bruger', new_user_path
+
+      /%li= link_to 'Profile', current_user
+      /%li= link_to 'Settings', edit_user_path(current_user)
+      %li= link_to 'Log ud', signout_path, :method => :delete
