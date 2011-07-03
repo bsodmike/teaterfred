@@ -15,16 +15,29 @@
         = render 'layouts/header'
 
       %section
+        #core
+          #menu
+            = render 'layouts/menu'
 
-        #menu
-          = render 'layouts/menu'
 
-        #main_content
-          = link_to 'Tilbage', request.headers['HTTP_REFERER']
-          = yield
+       
+          #main_content
+            .spacer{:style => 'float:left;margin-right: 10px;' }
+              = image_tag 'core/spacer.png'
+            .spacer{:style => 'float:right;' }
+              = image_tag 'core/spacer.png'
+              
+            .link{:style => 'color: grey;'}
+              = link_to 'Tilbage', request.headers['HTTP_REFERER']
+            %br/
+            = yield
+            
+            
+            
 
-      #side_content
-        = #render 'layouts/side_content'
+
+          #side_content
+            = #render 'layouts/side_content'
 
       #footer
         = render 'layouts/footer'

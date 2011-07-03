@@ -14,6 +14,7 @@ a {
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
+  background: url('core/background.png') repeat-x;
 }
 
 .container {
@@ -23,7 +24,7 @@ body {
 
   #header {
     border-bottom: 1px solid #c2bd9f;
-    height: 200px;
+    height: 150px;
     width: 100%;
     padding-top: 20px;
 
@@ -43,8 +44,27 @@ body {
   }
 
   section {
+    
     width: 100%;
     height: 100%;
+
+    #core {
+      background: url('core/background.png') repeat-x;
+      width: 100%;
+      height: 600px;
+    }
+
+    .spacer {
+      width: 1px;
+      height: 100%;
+
+      #left {
+        float: left;
+      }
+      #right {
+        float: right;
+      }
+    }
 
     #menu {
       float: left;
@@ -83,7 +103,6 @@ body {
       float: left;
       width: 500px;
       min-height: 600px;
-      margin-right: 20px;
     }
   }
 
@@ -95,7 +114,7 @@ body {
   #footer {
     text-align: center;
     height: 38px;
-    width: 100%;
+    width: 100% !important;
     background: #eaeaea repeat-x;
     border-top: 1px solid #dedede;
     float: left;
