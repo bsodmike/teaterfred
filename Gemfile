@@ -17,8 +17,6 @@ gem 'carrierwave'
 
 gem 'inherited_resources'
 
-gem 'table_builder'
-gem 'calendar_helper'
 gem 'later_dude'
 
 group :production do

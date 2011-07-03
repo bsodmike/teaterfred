@@ -35,8 +35,6 @@ GEM
     arel (2.1.3)
     bcrypt-ruby (2.1.4-x86-mingw32)
     builder (3.0.0)
-    calendar_helper (0.2.4)
-      open4
     carrierwave (0.5.4)
       activesupport (~> 3.0)
     coffee-script (2.2.0)
@@ -75,7 +73,6 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.16)
     multi_json (1.0.3)
-    open4 (1.1.0)
     pg (0.11.0-x86-mingw32)
     polyglot (0.3.1)
     rack (1.3.0)
@@ -129,7 +126,6 @@ GEM
       rack (~> 1.0)
       tilt (!= 1.3.0, ~> 1.1)
     sqlite3 (1.3.3-x86-mingw32)
-    table_builder (0.2.3)
     term-ansicolor (1.0.5)
     therubyracer-heroku (0.8.1.pre3)
     thin (1.2.11-x86-mingw32)
@@ -151,7 +147,6 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
-  calendar_helper
   carrierwave
   coffee-script
   cucumber
@@ -166,7 +161,6 @@ DEPENDENCIES
   sass-rails (~> 3.1.0.rc)
   sprockets (= 2.0.0.beta.10)
   sqlite3
-  table_builder
   therubyracer-heroku (= 0.8.1.pre3)
   thin
   turn
