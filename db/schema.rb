@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110703121204) do
+ActiveRecord::Schema.define(:version => 20110703172255) do
 
   create_table "boards", :force => true do |t|
     t.string   "name"
@@ -25,11 +25,12 @@ ActiveRecord::Schema.define(:version => 20110703121204) do
     t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.date     "published_on"
+    t.string   "published_on"
+    t.string   "start"
   end
 
   create_table "galleries", :force => true do |t|
-    t.string   "name"
+    t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "place"
@@ -37,7 +38,6 @@ ActiveRecord::Schema.define(:version => 20110703121204) do
 
   create_table "images", :force => true do |t|
     t.string   "title"
-    t.string   "image"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "gallery_id"
@@ -71,11 +71,11 @@ ActiveRecord::Schema.define(:version => 20110703121204) do
     t.string   "address"
     t.string   "phone"
     t.string   "email"
-    t.string   "map_link"
-    t.string   "website_link"
-    t.string   "image"
+    t.string   "link"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image"
+    t.string   "website_link"
   end
 
   create_table "users", :force => true do |t|

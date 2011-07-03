@@ -111,13 +111,14 @@ body {
     #main_content {
       /*-moz-linear-gradient(center bottom, rgb(238,142,32) 100%, rgb(241,241,241) 10%);*/
       float: left;
-      width: 500px;
+      width: 400px;
       min-height: 600px;
       margin:auto;
     }
   }
 
   #side_content {
+      width:300px;
       float: left;
     }
 

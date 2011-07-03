@@ -1,5 +1,5 @@
 Teaterfred::Application.routes.draw do
-
+  
   resources :news_items
 
   resources :news
@@ -15,6 +15,9 @@ Teaterfred::Application.routes.draw do
   # SESSIONS - sign -in/out
   match '/signin', :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'
+
+  # JSON feed for fullcalendar
+  match "feeds/events"
 
   # TICKETS
   #match '/tickets', :to => ''
