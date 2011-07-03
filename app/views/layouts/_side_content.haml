@@ -1,7 +1,7 @@
 #calendar
   %h3#month
-    - @events = Event.all
-    - @dates = params[:month] ? Date.parse(params[:month]) : Date.today
+    - events = Event.all
+    - dates = params[:month] ? Date.parse(params[:month]) : Date.today
     = #debug get_date
     = link_to "<", :month => (dates.beginning_of_month-1).strftime("%Y-%m")
     =h dates.strftime("%B %Y")
