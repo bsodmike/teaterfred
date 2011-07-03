@@ -1,0 +1,21 @@
+%h3 Nyheder
+%table
+  %tr
+    %th Titel
+    %th Indhold
+    %th Sted
+    %th Billede
+    %th
+    %th
+    %th
+  - @news_items.each do |news_item|
+    %tr
+      %td= news_item.title
+      %td= news_item.content
+      %td= news_item.place
+      %td= news_item.image
+      %td= link_to 'Vis', news_item
+      %td= link_to 'Rediger', edit_news_item_path(news_item)
+      %td= link_to 'Slet', news_item, confirm: 'Er du sikker?', method: :delete
+%br/
+= link_to 'Opret nyhed', new_news_item_path

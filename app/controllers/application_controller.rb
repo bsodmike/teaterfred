@@ -1,11 +1,10 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   force_ssl
+
   @events = Event.all
   
   private
-
-  
 
   def signed_in_user
     if current_user.nil?

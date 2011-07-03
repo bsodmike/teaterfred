@@ -1,0 +1,16 @@
+%p#notice= notice
+%p
+  %b Titel:
+  = @news_item.title
+%p
+  %b Indhold:
+  = @news_item.content
+%p
+  %b Sted:
+  = @news_item.place
+%p
+  %b Billede:
+  = @news_item.image
+= link_to 'Rediger', edit_news_item_path(@news_item)
+|
+= link_to 'Tilbage', news_items_path

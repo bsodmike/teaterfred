@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-News.create([
+NewsItem.create([
     {
         title: 'ALDER INGEN HINDRING',
         place: 'Egelunden, Kokkedal',

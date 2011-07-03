@@ -57,12 +57,14 @@
       %li
         = link_to 'Spillesteder', places_path
       %li
-        = link_to 'Nyheder', news
+        = link_to 'Nyheder', news_items_path
         \-
         = link_to 'Opret nyhed', new_news_path
       %li
+        = link_to 'Begivenheder', events_path
+        \-
+        = link_to 'Opret begivenhed', new_event_path
+      %li
         = link_to 'Ny bruger', new_user_path
-
-      /%li= link_to 'Profile', current_user
-      /%li= link_to 'Settings', edit_user_path(current_user)
-      %li= link_to 'Log ud', signout_path, :method => :delete
+      %li
+        = link_to 'Log ud', signout_path, :method => :delete

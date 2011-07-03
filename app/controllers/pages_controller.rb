@@ -3,7 +3,7 @@ class PagesController < ApplicationController
 
   def index
     @page_title = 'Index'
-    @news = News.all
+    @news = NewsItem.all
   end
 
   def contact

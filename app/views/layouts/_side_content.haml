@@ -1,19 +1,22 @@
 #calendar
-  %h2#month
+  %h3#month
+    - @events = Event.all
+    - @dates = params[:month] ? Date.parse(params[:month]) : Date.today
     = #debug get_date
-    = link_to "<", :month => (date.beginning_of_month-1).strftime("%Y-%m")
-    =h date.strftime("%B %Y")
-    = link_to ">", :month => (date.beginning_of_month+1).strftime("%Y-%m")
-    
-    = debug Event.all
-    = debug @events
-    = debug events
+    = link_to "<", :month => (dates.beginning_of_month-1).strftime("%Y-%m")
+    =h dates.strftime("%B %Y")
+    = link_to ">", :month => (dates.beginning_of_month+1).strftime("%Y-%m")
 
-  - calendar_for events, :year => date.year, :month => date.month do |t|
-    =# t.head('Sø', 'Ma', 'Ti', 'On', 'To', 'Fr', 'Lø')
-    - t.day(:day_method => @events.published_on) do |date, event| #
-      = date.day
-      %ul
-      - event.each do |e|
-        %li= link_to h(e.title), event
+    
+
+    = #debug events
+
+    - calendar_for events, :year => dates.year, :month => dates.month do |calendar|
+      = calendar.head('S', 'M', 'T', 'O', 'T', 'F', 'L')
+      - calendar.day(:day_method => :published_on) do |date, event| #
+        = date.day
+        %ul
+          - event.each do |e|
+            %li= link_to h(e.title), e
+  
  

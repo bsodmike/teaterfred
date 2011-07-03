@@ -1,11 +1,11 @@
 Teaterfred::Application.routes.draw do
 
-  resources :news
+  resources :news_items
 
+  resources :news
   resources :events
   resources :boards
   resources :partners
-  resources :news
   resources :places
   resources :images
   resources :galleries
@@ -18,7 +18,6 @@ Teaterfred::Application.routes.draw do
 
   # TICKETS
   #match '/tickets', :to => ''
-
 
   root :to => 'pages#index'
 
