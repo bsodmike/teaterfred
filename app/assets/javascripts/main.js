@@ -2,6 +2,6 @@ $(function() {
 
   $("#event_published_on").datepicker();
 
-  $(".image_box").fancybox();
+  $(".image_box a").lightBox();
   
 });
