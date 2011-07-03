@@ -2,7 +2,6 @@
 %table
   %tr
     %th Titel
-    %th Indhold
     %th Sted
     %th Billede
     %th
@@ -11,7 +10,6 @@
   - @news_items.each do |news_item|
     %tr
       %td= news_item.title
-      %td= news_item.content
       %td= news_item.place
       %td= news_item.image
       %td= link_to 'Vis', news_item
