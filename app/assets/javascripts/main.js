@@ -3,6 +3,7 @@ $(function() {
   $("#event_published_on").datepicker();
   $("#event_start").datepicker();
 
+<<<<<<< HEAD
   $('#calendar').fullCalendar({
       // see http://arshaw.com/fullcalendar/docs
       // for details.
@@ -10,4 +11,8 @@ $(function() {
       aspectRatio: 2,
       dayNamesShort:['S', 'M', 'T', 'W', 'T', 'F', 'S'] 
   })
+=======
+  $(".image_box a").lightBox();
+  
+>>>>>>> master
 });

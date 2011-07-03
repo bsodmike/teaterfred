@@ -44,11 +44,47 @@ body {
     height: 100%;
 
     #core {
+<<<<<<< HEAD
       width: 100%;
       #main_content {
         width: 800px;
         min-height: 600px;
         margin: auto;
+=======
+      margin: auto;
+      height: 600px;
+      min-width: 800px;
+    }
+    #main_content {
+      width: 800px;
+      min-height: 600px;
+      margin: auto;
+    }
+
+    .spacer {
+      width: 1px;
+      height: 100%;
+
+      #left {
+        float: left;
+      }
+      #right {
+        float: right;
+      }
+    }
+    
+
+    #menu {
+      float: left;
+      margin-left: 20px;
+      margin-top: 20px;
+      padding: 0;
+
+      ul {
+        padding: 0;
+        font-size: 16px;
+        list-style-type: none;
+>>>>>>> master
       }
   
       .spacer {
@@ -69,6 +105,7 @@ body {
         margin-left: 20px;
         margin-top: 20px;
         padding: 0;
+<<<<<<< HEAD
   
         ul {
           padding: 0;
@@ -82,6 +119,16 @@ body {
           margin: 0;
           padding: 0;
           clear: both;
+=======
+        clear: both;
+        
+        ul.submenu {
+          font-size: 14px;
+          display: inline-block;
+          position: absolute;
+          float: right;
+          margin-left: 40px;
+>>>>>>> master
           
           ul.submenu {
             font-size: 14px;
@@ -113,6 +160,13 @@ body {
       }
     }
   }
+<<<<<<< HEAD
+=======
+
+  #side_content {
+      float: left;
+    }
+>>>>>>> master
 }
 #footer {
     text-align: center;
