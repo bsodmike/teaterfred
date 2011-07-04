@@ -8,7 +8,7 @@ $(function() {
       // for details.
       events: '/feeds/events.json',
       aspectRatio: 2,
-      dayNamesShort:['S', 'M', 'T', 'W', 'T', 'F', 'S'] 
+      dayNamesShort:['S', 'M', 'T', 'O', 'T', 'F', 'L'] 
   });
   
   $(".image_box a").lightBox();
