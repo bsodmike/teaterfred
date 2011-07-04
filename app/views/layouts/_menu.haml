@@ -35,7 +35,7 @@
       %ul.submenu
         - Gallery.all.each do |gallery|
           %li
-            = link_to gallery.name, gallery
+            = link_to gallery.title, gallery
     %li
       = link_to 'Kontakt', contact_path
 
