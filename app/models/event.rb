@@ -1,5 +1,7 @@
 class Event < ActiveRecord::Base
 
-  attr_accessible :title, :start, :published_on
+  def start
+    published_on
+  end
 
 end
