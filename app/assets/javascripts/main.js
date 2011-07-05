@@ -3,17 +3,6 @@ $(function() {
   $("#event_published_on").datepicker();
   $("#event_start").datepicker();
 
-<<<<<<< HEAD
-  $('#calendar').fullCalendar({
-      // see http://arshaw.com/fullcalendar/docs
-      // for details.
-      events: '/feeds/events.json',
-      aspectRatio: 2,
-      dayNamesShort:['S', 'M', 'T', 'O', 'T', 'F', 'L'] 
-  });
-  
-  $(".image_box a").lightBox();
-=======
   $(".image_box a").lightBox();
 
   $('#calendar').fullCalendar({
@@ -71,10 +60,4 @@ $(function() {
       $("#calendar .fc-grid td").removeClass("has-event");
       $("#calendar").fullCalendar('rerenderEvents');
   }
-<<<<<<< HEAD
->>>>>>> development
-=======
->>>>>>> 9ddce6616733a28c6c44834d70dd485b0a1146a9
->>>>>>> 08da2d98277868f6b16651ca886848f0b34afbc2
-  
 });
