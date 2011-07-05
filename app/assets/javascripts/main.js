@@ -71,6 +71,10 @@ $(function() {
       $("#calendar .fc-grid td").removeClass("has-event");
       $("#calendar").fullCalendar('rerenderEvents');
   }
+<<<<<<< HEAD
 >>>>>>> development
+=======
+>>>>>>> 9ddce6616733a28c6c44834d70dd485b0a1146a9
+>>>>>>> 08da2d98277868f6b16651ca886848f0b34afbc2
   
 });
