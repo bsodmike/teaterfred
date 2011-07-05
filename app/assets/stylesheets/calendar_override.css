@@ -1,3 +1,7 @@
+#calendar table.fc-header {margin:5px 0 0 0!important;}
+.fc-border-separate thead .fc-widget-header {border:none!important;padding: 0 0 5px 0;}
+.fc-border-separate tbody .fc-week0 .fc-widget-content {border-top:1px solid #CCC!important;}
+
 .fc-day-content{display:none;}
 
 /*.fc-grid .fc-day-content {display:none!important;}
@@ -7,9 +11,9 @@
 /*td.fc-widget-content{background:url(../img/calendar/calendarDateBg.png) no-repeat center top!important;color:#8B8E9B;font-size:17px;font-family:Arial, Helvetica, sans-serif;line-height:10px;}*/
 th.fc-state-default{height:20px;color:#FFF;font-family:Arial, Helvetica, sans-serif;font-size:15px;}
 /*td.fc-other-month div{color:#F6F7F7;background:none!important}*/
-.fc-grid .fc-day-number {float:left!important;padding:4px 0 0 0px!important;font-weight:bold;}
+.fc-grid .fc-day-number {float:none!important;margin:0 auto;text-align:center;padding:4px 0 0 5px!important;font-weight:bold;}
 td.fc-other-month .fc-day-content{color:#ECECEC} 
-.fc-header-title{font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;font-size:14px;color:#000;text-transform:uppercase}
+.fc-header-title{font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;font-size:14px;color:#fff;text-transform:uppercase}
 td.has-event {background:url(calendar/calendarDateBgRed.png) no-repeat center top!important;color:#FFF!important }
 .fc-grid .fc-day-content {padding:0px!important;float:none}
 /*.fc-today .fc-day-number{background:url(../img/calendar/calendarCurrentDateBg.png) no-repeat 5px 2px}*/
