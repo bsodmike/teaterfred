@@ -23,7 +23,7 @@ body {
   #header {
     width: 1000px;
     height: 150px;
-    padding-top: 20px;
+    padding-top: 21px;
     text-align: center;
     margin: auto;
 
@@ -39,17 +39,21 @@ body {
   }
 
   section {
-    margin: auto;
+    margin: 0 auto;
     border-top: 1px solid #c2bd9f;
     height: 100%;
+    display: block;
+    clear: both;
+    width: 1024px;
 
     #core {
       width: 100%;
       
       #main_content {
-        width: 700px;
+        width: 580px;
         min-height: 600px;
-        margin-left: 150px;
+        margin-left: 200px;
+        border-top:1px solid #c2bd9f;
       }
 
     .spacer {
