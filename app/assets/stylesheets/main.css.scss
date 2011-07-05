@@ -47,9 +47,15 @@ body {
       width: 100%;
       
       #main_content {
+<<<<<<< HEAD
         width: 800px;
         min-height: 600px;
         margin: auto;
+=======
+        width: 700px;
+        min-height: 600px;
+        margin-left: 150px;
+>>>>>>> 9ddce6616733a28c6c44834d70dd485b0a1146a9
       }
 
     .spacer {
@@ -106,10 +112,18 @@ body {
     /* MENU END */
       
     #side_content {
+<<<<<<< HEAD
       float: left;
     
       #calendar_wrapper {
         width: 180px !important;
+=======
+      float: right;
+      padding: 10px;
+    
+      #calendar_wrapper {
+        width: 200px!important;
+>>>>>>> 9ddce6616733a28c6c44834d70dd485b0a1146a9
       }
     }
     }

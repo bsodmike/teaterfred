@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <table>
+    <% @gallery.images.each do |gallery| %>
+      <tr>
+        <td><%= gallery.title %></td>
+        <td class="image_box">
+          <a href="<%= gallery.image %>"><img alt="<%= gallery.title %>" height="100" src="<%= gallery.image %>" width="100"></a>  
+        </td>
+      </tr>
+    <% end %>
+  </table>
+</p>
+          
+<% if current_user %>
+  <%= link_to 'Rediger', edit_gallery_path(@gallery) %>
+    |
+  <%= link_to 'Tilbage', galleries_path %>
+<% end %>
