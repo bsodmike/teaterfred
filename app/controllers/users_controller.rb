@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :current_user
+  before_filter :current_user, :only => [:new, :create]
 
   def new
     @user = User.new

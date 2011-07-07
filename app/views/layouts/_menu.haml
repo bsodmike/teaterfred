@@ -42,8 +42,8 @@
   %br/
   %br/
 
-  %ul.admin_menu
-    - if current_user
+  - if current_user
+    %ul.admin_menu
       %li
         %b Admin
       %li
@@ -60,7 +60,7 @@
         = link_to 'Spillesteder', places_path
       %li
         = link_to 'Nyheder', news_items_path
-        %br/ 
+        %br/
         \-
         = link_to 'Opret nyhed', new_news_item_path
       %li
@@ -72,3 +72,7 @@
         = link_to 'Ny bruger', new_user_path
       %li
         = link_to 'Log ud', signout_path, :method => :delete
+	    
+    %u Bruger:
+    %br/
+    = current_user.email
