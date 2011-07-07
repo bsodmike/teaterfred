@@ -34,6 +34,12 @@
             .link{:style => 'color: grey;margin-top: 10px;'}
               = link_to 'Tilbage', request.headers['HTTP_REFERER']
             %br/
+            
+            - flash.each do |key, value|
+              .flash
+              	##{key}
+			      = value
+			                  
             = yield
     #footer
       = render 'layouts/footer'
