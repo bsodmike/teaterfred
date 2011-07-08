@@ -1,39 +1,47 @@
 !!!
 %html
-  %head
-  %title Teaterforeningen Fredensborg Kommune
-  = stylesheet_link_tag "application"
-  = javascript_include_tag "application"
-  = javascript_include_tag '//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js', '//ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js', 'jquery.lightbox-0.5.min.js',
-  'fullcalendar.js',
-  'jquery.qtip.min.js'
-  
-  = csrf_meta_tags
+	%head
+	%title Teaterforeningen Fredensborg Kommune
+	= stylesheet_link_tag "application"
+	= javascript_include_tag "application"
+	= javascript_include_tag '//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js', '//ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js', 'jquery.lightbox-0.5.min.js',
+	'fullcalendar.js',
+	'jquery.qtip.min.js'
+	
+	= csrf_meta_tags
 
-  %body
+	%body
 
-    .container
+		.container
 
-      #header
-        = render 'layouts/header'
+			#header
+				= render 'layouts/header'
 
-      %section
-        #core
-          #menu
-            = render 'layouts/menu'
-            
-          #side_content
-            = render 'layouts/side_content'
+			%section
+				#core
+					#menu
+						= render 'layouts/menu'
+						
+					#side_content
+						= render 'layouts/side_content'
 
-          #main_content
-            .spacer{:style => 'float:left;margin-right: 30px;' }
-              = image_tag 'core/spacer.png'
-            .spacer{:style => 'float:right;margin-left: 10px;' }
-              = image_tag 'core/spacer.png'
-
-            .link{:style => 'color: grey;margin-top: 10px;'}
-              = link_to 'Tilbage', request.headers['HTTP_REFERER']
-            %br/
-            = yield
-    #footer
-      = render 'layouts/footer'
+					#main_content
+						.spacer{:style => 'float:left;margin-right: 30px;' }
+							= image_tag 'core/spacer.png'
+						.spacer{:style => 'float:right;margin-left: 10px;' }
+							= image_tag 'core/spacer.png'
+						
+						- if current_page?('/')
+							%br/
+						- else
+							.link{:style => 'color: grey;padding-top: 10px;'}
+								= link_to 'Tilbage', request.headers['HTTP_REFERER']
+							%br/
+						
+						- flash.each do |key, value|
+							.flash{:id => key} 
+								= value
+								
+						= yield
+		#footer
+			= render 'layouts/footer'

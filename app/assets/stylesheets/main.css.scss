@@ -14,7 +14,7 @@ a {
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: url('core/background.png') repeat-x scroll 0 179px;
+  background: url('core/background.png') repeat-x scroll 0 178px;
   width: 100%;
 }
 
@@ -40,7 +40,6 @@ body {
 
   section {
     margin: 0 auto;
-    border-top: 1px solid #c2bd9f;
     height: 100%;
     display: block;
     clear: both;
@@ -53,7 +52,6 @@ body {
         width: 580px;
         min-height: 600px;
         margin-left: 200px;
-        border-top:1px solid #c2bd9f;
       }
 
     .spacer {
@@ -78,6 +76,7 @@ body {
       ul {
         padding: 0;
         font-size: 16px;
+        font-weight: bold;
         list-style-type: none;
       }
       .submenu {
@@ -132,4 +131,53 @@ body {
     margin-bottom: 0;
     padding-top: 5px;
     font-size: 14px;
-  }
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px; } }
+.flash {
+	padding: 4px 0 4px 0; 
+	margin-left: 4px;
+	margin-right: 4px;
+} 
+#notice {
+  color: green;
+  background-color: #EBFFEB;
+  border: 1px solid #9DFF9D; 
+}
+#error {
+	color: red;
+	background-color: #FFEBE8;
+  border: 1px solid #DD3C10;	
+}
+#alert {
+	color: blue;
+	background: #EAF2F5;
+  border: 1px solid #BEDCE7;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table; }
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff; }
+  ul li {
+    font-size: 12px;
+    list-style: square; } }
