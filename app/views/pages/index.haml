@@ -1,18 +1,16 @@
 - @news.each do |news|
-  .span-10
-    .span-5{:style => "float:left;"}
-      = image_tag "/images/alder_ingen_hindring.jpg", :width => 180, :height => 150
-      /= image_tag "/images/#{news.image}"
+    = image_tag "/images/alder_ingen_hindring.jpg", :width => 180, :height => 150
+    /= image_tag "/images/#{news.image}"
 
-    .span-4{:style => "float:left;"}
-      %strong= news.title
-      %br/
-      = news.created_at
-      \-
-      = news.place
-      %br/
-      %br/
-      = truncate news.content, :length => 90
-      = link_to 'læs mere', news
 
+    %strong= news.title
     %br/
+    = news.created_at
+    \-
+    = news.place
+    %br/
+    %br/
+    = truncate news.content, :length => 90
+    = link_to 'læs mere', news
+
+  %br/
