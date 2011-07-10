@@ -26,9 +26,9 @@
 						= render 'layouts/side_content'
 
 					#main_content
-						.spacer{:style => 'float:left;margin-right: 30px;' }
+						.spacer{:style => 'float:left' }
 							= image_tag 'core/spacer.png'
-						.spacer{:style => 'float:right;margin-left: 10px;' }
+						.spacer{:style => 'float:right' }
 							= image_tag 'core/spacer.png'
 						
 						- if current_page?('/')
@@ -41,7 +41,8 @@
 						- flash.each do |key, value|
 							.flash{:id => key} 
 								= value
-								
-						= yield
+						
+						#content_wrapper		
+							= yield
 		#footer
 			= render 'layouts/footer'
