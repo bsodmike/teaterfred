@@ -16,6 +16,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background: url('core/background.png') repeat-x scroll 0 178px;
   width: 100%;
+  margin:0!important;
 }
 
 .container {
@@ -73,7 +74,7 @@ body {
     /* MENU START */
     #menu {
       float: left;
-      margin-left: 20px;
+      margin-left: 0px;
       margin-top: 20px;
       padding: 0;
 
@@ -86,17 +87,20 @@ body {
       .submenu {
         display: none;
       }
+      li{
+        padding-right:20px
+      }
       li:hover {
         margin: 0;
-        padding: 0;
+        padding-right:20px;
         clear: both;
         
         ul.submenu {
-          font-size: 14px;
-          display: inline-block;
+          font-size: 12px;
+          display: block;
           position: absolute;
           float: right;
-          margin-left: 40px;
+          margin-left: 80px;
           
           li {
             text-align: right;
