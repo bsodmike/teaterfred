@@ -1,9 +1,10 @@
 %p
 	- @news.each do |news|
 		= image_tag "/images/alder_ingen_hindring.jpg", :width => 180, :height => 150
+		%br/
 		%strong= news.title
 		%br/
-		= news.created_at
+		= news.created_at.strftime('%d/%m/%y')
 		\-
 		= news.place
 		%br/
@@ -11,4 +12,6 @@
 		= truncate news.content, :length => 90
 		= link_to 'læs mere', news
 		
+		%br/
+		%br/
 		%br/
