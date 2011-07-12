@@ -2,7 +2,7 @@ $(function() {
 	
 	
   $(".menu").accordion({
-  	event: 'mouseover'
+    event: 'mouseover'
   });
 
   $("#event_published_on").datepicker();
