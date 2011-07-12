@@ -1,4 +1,9 @@
 $(function() {
+	
+	
+  $(".menu").accordion({
+  	event: 'mouseover'
+  });
 
   $("#event_published_on").datepicker();
   $("#event_start").datepicker();
