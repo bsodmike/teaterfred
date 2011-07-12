@@ -69,6 +69,11 @@
         \-
         = link_to 'Opret begivenhed', new_event_path
       %li
+        = link_to 'Samarbejdspartnere', partners_path
+        %br/
+        \-
+        = link_to 'Opret samarbejdspartner', new_partner_path
+      %li
         = link_to 'Ny bruger', new_user_path
       %li
         = link_to 'Log ud', signout_path, :method => :delete

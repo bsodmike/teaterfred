@@ -10,5 +10,11 @@
       %td= label_tag :password
       %td= password_field_tag :password
     %tr
+      %td= label_tag :husk
+      %td= check_box_tag :remember_me, 1, params[:remember_me]    
+    %tr
+      %td
+      %td= link_to 'Glemt kodeord?', new_password_reset_path
+    %tr
       %td
       %td= submit_tag "Log in"

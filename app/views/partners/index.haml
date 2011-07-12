@@ -1,17 +1,14 @@
-%h1 Listing partners
+%h3 Samarbejdspartnere
 %table
-  %tr
-    %th Image
-    %th Link
-    %th
-    %th
-    %th
   - @partners.each do |partner|
     %tr
       %td= partner.image
       %td= partner.link
-      %td= link_to 'Show', partner
-      %td= link_to 'Edit', edit_partner_path(partner)
-      %td= link_to 'Destroy', partner, confirm: 'Are you sure?', method: :delete
+      
+      - if current_user
+        %td= link_to 'Vis', partner
+        %td= link_to 'Rediger', edit_partner_path(partner)
+        %td= link_to 'Slet', partner, confirm: 'Are you sure?', method: :delete
 %br/
-= link_to 'New Partner', new_partner_path
+- if current_user
+  = link_to 'Opret samarbejdspartner', new_partner_path
