@@ -46,42 +46,42 @@
   %br/
   %br/
 
-  - if current_user
-    %ul.admin_menu
-      %li
-        %b Admin
-      %li
-        = link_to 'Galleri', galleries_path
-        %br/
-        \-
-        = link_to 'Nyt galleri', new_gallery_path
-      %li
-        = link_to 'Billeder', images_path
-        %br/
-        \-
-        = link_to 'Nyt billede', new_image_path
-      %li
-        = link_to 'Spillesteder', places_path
-      %li
-        = link_to 'Nyheder', news_items_path
-        %br/
-        \-
-        = link_to 'Opret nyhed', new_news_item_path
-      %li
-        = link_to 'Begivenheder', events_path
-        %br/
-        \-
-        = link_to 'Opret begivenhed', new_event_path
-      %li
-        = link_to 'Samarbejdspartnere', partners_path
-        %br/
-        \-
-        = link_to 'Opret samarbejdspartner', new_partner_path
-      %li
-        = link_to 'Ny bruger', new_user_path
-      %li
-        = link_to 'Log ud', signout_path, :method => :delete
-	    
-    %u Bruger:
-    %br/
-    = current_user.email
+- if current_user
+  %ul.admin_menu
+    %li
+      %b Admin
+    %li
+      = link_to 'Galleri', galleries_path
+      %br/
+      \-
+      = link_to 'Nyt galleri', new_gallery_path
+    %li
+      = link_to 'Billeder', images_path
+      %br/
+      \-
+      = link_to 'Nyt billede', new_image_path
+    %li
+      = link_to 'Spillesteder', places_path
+    %li
+      = link_to 'Nyheder', news_items_path
+      %br/
+      \-
+      = link_to 'Opret nyhed', new_news_item_path
+    %li
+      = link_to 'Begivenheder', events_path
+      %br/
+      \-
+      = link_to 'Opret begivenhed', new_event_path
+    %li
+      = link_to 'Samarbejdspartnere', partners_path
+      %br/
+      \-
+      = link_to 'Opret samarbejdspartner', new_partner_path
+    %li
+      = link_to 'Ny bruger', new_user_path
+    %li
+      = link_to 'Log ud', signout_path, :method => :delete
+    
+  %u Bruger:
+  %br/
+  = current_user.email
