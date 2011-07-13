@@ -9,7 +9,7 @@
   = @news_item.place
 %p
   %b Billede:
-  = @news_item.image
+  = image_tag @news_item.image, :width => 100, :height => 100
   
 - if current_user
   = link_to 'Rediger', edit_news_item_path(@news_item)
