@@ -1,4 +1,4 @@
-class EventsController < InheritedResources::Base
+class EventsController < ApplicationController
   before_filter :signed_in_user, :only => [:new, :create, :edit, :update, :destroy]
 
   def index
@@ -25,18 +25,18 @@ class EventsController < InheritedResources::Base
     @event = Event.new(params[:event])
 
     if @event.save
-      redirect_to(@event, :notice => 'Nyheden blev oprettet')
+      redirect_to(@event, :notice => 'Begivenheden blev oprettet')
     else
-      render :new, :error => 'Nyheden blev ikke oprettet'
+      render :new, :error => 'Begivenheden blev ikke oprettet'
     end
   end
 
   def update
     @event = Event.find(params[:id])
     if @event.update_attributes(params[:event])
-      redirect_to(@event, :notice => 'Nyheden blev odpateret')
+      redirect_to(@event, :notice => 'Begivenheden blev opdateret')
     else
-      render :edit, :error => 'Nyheden blev ikke opdateret'
+      render :edit, :error => 'Begivenheden blev ikke opdateret'
     end
   end
 

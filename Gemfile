@@ -15,10 +15,6 @@ gem 'jquery-rails'
 
 gem 'carrierwave'
 
-gem 'inherited_resources'
-
-gem 'later_dude'
-
 group :production do
   gem 'therubyracer-heroku', '0.8.1.pre3'
   gem 'pg'

@@ -29,7 +29,7 @@ class NewsItemsController < ApplicationController
   def update
     @news_item = NewsItem.find(params[:id])
     if @news_item.update_attributes(params[:news_item])
-      redirect_to(@news_item, :notice => 'Nyheden blev odpateret')
+      redirect_to(@news_item, :notice => 'Nyheden blev opdateret')
     else
       render :edit, :error => 'Nyheden blev ikke opdateret'
     end

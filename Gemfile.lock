@@ -36,16 +36,16 @@ GEM
     bcrypt-ruby (2.1.4)
     bcrypt-ruby (2.1.4-x86-mingw32)
     builder (3.0.0)
-    carrierwave (0.5.4)
+    carrierwave (0.5.6)
       activesupport (~> 3.0)
     coffee-script (2.2.0)
       coffee-script-source
       execjs
     coffee-script-source (1.1.1)
-    cucumber (1.0.0)
+    cucumber (1.0.1)
       builder (>= 2.1.2)
       diff-lcs (>= 1.1.2)
-      gherkin (~> 2.4.1)
+      gherkin (~> 2.4.5)
       json (>= 1.4.6)
       term-ansicolor (>= 1.0.5)
     daemons (1.1.4)
@@ -55,22 +55,17 @@ GEM
     eventmachine (1.0.0.beta.3-x86-mingw32)
     execjs (1.2.0)
       multi_json (~> 1.0)
-    gherkin (2.4.1)
+    gherkin (2.4.5)
       json (>= 1.4.6)
-    gherkin (2.4.1-x86-mingw32)
+    gherkin (2.4.5-x86-mingw32)
       json (>= 1.4.6)
     haml (3.1.2)
-    has_scope (0.5.0)
     hike (1.1.0)
     i18n (0.6.0)
-    inherited_resources (1.2.2)
-      has_scope (~> 0.5.0)
-      responders (~> 0.6.0)
     jquery-rails (1.0.12)
       railties (~> 3.0)
       thor (~> 0.14)
     json (1.5.3)
-    later_dude (0.3.2)
     mail (2.3.0)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -106,7 +101,6 @@ GEM
       thor (~> 0.14.6)
     rake (0.9.2)
     rdoc (3.8)
-    responders (0.6.4)
     rspec (2.6.0)
       rspec-core (~> 2.6.0)
       rspec-expectations (~> 2.6.0)
@@ -163,9 +157,7 @@ DEPENDENCIES
   cucumber
   eventmachine (= 1.0.0.beta.3)
   haml
-  inherited_resources
   jquery-rails
-  later_dude
   pg
   rails (= 3.1.0.rc4)
   rspec-rails

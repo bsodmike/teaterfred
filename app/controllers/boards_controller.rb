@@ -20,18 +20,18 @@ class BoardsController < ApplicationController
   def create
     @board = Board.new(params[:board])
     if @board.save
-      redirect_to(@board, :notice => 'Board was successfully created.')
+      redirect_to(@board, :notice => 'Bestyrelsesmedlem blev oprettet')
     else
-      render :new
+      render :new, :error => 'Bestyrelsesmedlem blev ikke oprettet'
     end
   end
 
   def update
     @board = Board.find(params[:id])
     if @board.update_attributes(params[:board])
-      redirect_to(@board, :notice => 'Board was successfully updated.')
+      redirect_to(@board, :notice => 'Bestyrelsesmedlem blev opdateret')
     else
-      render :edit
+      render :edit, :error => 'Bestyrelsesmedlem blev ikke opdateret'
     end
   end
 

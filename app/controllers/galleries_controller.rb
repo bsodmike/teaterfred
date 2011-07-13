@@ -1,4 +1,4 @@
-class GalleriesController < InheritedResources::Base
+class GalleriesController < ApplicationController
   before_filter :signed_in_user, :only => [:new, :create, :edit, :update, :destroy]
   
   def index
@@ -21,18 +21,18 @@ class GalleriesController < InheritedResources::Base
     @gallery = Gallery.new(params[:gallery])
 
     if @gallery.save
-      redirect_to(@gallery, :notice => 'Nyheden blev oprettet')
+      redirect_to(@gallery, :notice => 'NGalleriet blev oprettet')
     else
-      render :new, :error => 'Nyheden blev ikke oprettet'
+      render :new, :error => 'Galleriet blev ikke oprettet'
     end
   end
 
   def update
     @gallery = Gallery.find(params[:id])
     if @gallery.update_attributes(params[:gallery])
-      redirect_to(@gallery, :notice => 'Nyheden blev odpateret')
+      redirect_to(@gallery, :notice => 'Galleriet blev opdateret')
     else
-      render :edit, :error => 'Nyheden blev ikke opdateret'
+      render :edit, :error => 'Galleriet blev ikke opdateret'
     end
   end
 
