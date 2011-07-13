@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   private
     def signed_in_user
       if current_user.nil?
-        redirect_to signin_path, :notice => "Please sign in to access this page"
+        redirect_to signin_path, :notice => "Log in for at se denne side"
       end
     end
 
