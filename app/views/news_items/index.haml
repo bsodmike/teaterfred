@@ -12,8 +12,10 @@
       %td= news_item.title
       %td= news_item.place
       %td= news_item.image
-      %td= link_to 'Vis', news_item
-      %td= link_to 'Rediger', edit_news_item_path(news_item)
-      %td= link_to 'Slet', news_item, confirm: 'Er du sikker?', method: :delete
+      - if current_user
+        %td= link_to 'Vis', news_item
+        %td= link_to 'Rediger', edit_news_item_path(news_item)
+        %td= link_to 'Slet', news_item, confirm: 'Er du sikker?', method: :delete
 %br/
-= link_to 'Opret nyhed', new_news_item_path
+- if current_user
+  = link_to 'Opret nyhed', new_news_item_path

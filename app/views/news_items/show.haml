@@ -10,6 +10,8 @@
 %p
   %b Billede:
   = @news_item.image
-= link_to 'Rediger', edit_news_item_path(@news_item)
-|
+  
+- if current_user
+  = link_to 'Rediger', edit_news_item_path(@news_item)
+  |
 = link_to 'Tilbage', news_items_path
