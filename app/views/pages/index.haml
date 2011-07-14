@@ -1,6 +1,6 @@
 - @news.each do |news|
   .news
-    = image_tag((news.image || 'noimageavailable.jpg'), :width => 180, :height => 150, :style => 'float:left;margin-right: 10px;')
+    /= image_tag((news.image || 'noimageavailable.jpg'), :width => 180, :height => 150, :style => 'float:left;margin-right: 10px;')
    
     .news_content{:style => 'float:left;width: 300px;'}
       %strong= news.title
