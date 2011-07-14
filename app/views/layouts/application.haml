@@ -8,9 +8,7 @@
 	'fullcalendar.js',
 	'jquery.qtip.min.js',
 	'jquery.markitup.js',
-	'set.js',
-  'plupload/plupload.js',
-	'plupload/plupload.html5.js'
+	'set.js'
 	
 	= csrf_meta_tags
 
@@ -50,3 +48,4 @@
 							= yield
 		#footer
 			= render 'layouts/footer'
+			= yield :scripts

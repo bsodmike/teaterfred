@@ -1,5 +1,6 @@
 class ImagesController < ApplicationController
   before_filter :signed_in_user, :only => [:new, :create, :edit, :update, :destroy]
+  
   respond_to :html, :json, :xml
 
   def index
@@ -44,5 +45,6 @@ class ImagesController < ApplicationController
     @image.destroy
     redirect_to(images_url)
   end
+  
 
 end
