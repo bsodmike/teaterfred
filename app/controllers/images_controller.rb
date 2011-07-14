@@ -1,5 +1,6 @@
 class ImagesController < ApplicationController
   before_filter :signed_in_user, :only => [:new, :create, :edit, :update, :destroy]
+  respond_to :html, :json, :xml
 
   def index
     @images = Image.all
