@@ -5,7 +5,10 @@
 %p
   = @news_item.place
 %p
-  = image_tag(@news_item.image || 'noimageavailable.jpg')
+  - if @news_item.image
+    = image_tag(@news_item.image)
+  - else
+    = image_tag('noimageavailable.jpg')
   
 - if current_user
   = link_to 'Rediger', edit_news_item_path(@news_item)
