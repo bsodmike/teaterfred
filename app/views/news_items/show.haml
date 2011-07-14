@@ -1,7 +1,7 @@
 %p
-  = @news_item.title
+  = raw(@news_item.title)
 %p
-  = @news_item.content
+  = raw(@news_item.content)
 %p
   = @news_item.place
 %p

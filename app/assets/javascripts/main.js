@@ -20,6 +20,8 @@ $(function() {
       header: {left: 'prev', center: 'title', right: 'next'},     
       dayNamesShort:['S', 'M', 'T', 'O', 'T', 'F', 'L']
   })
+  
+  $(".text_field").markItUp(mySettings);
 
   function eventRenderer(event, element, view) {
       if (view.start.getMonth() == event.start.getMonth()) {

@@ -19,7 +19,7 @@ class TeaterfredPages < ActiveRecord::Base
       '/tickets' => {
           :title => 'Billetter',
           :template => '/pages/tickets/index.haml'
-      }
+      },
       '/become_member' => {
           :title => 'Bliv Medlem',
           :template => '/pages/tickets/become_member.haml'
@@ -27,7 +27,7 @@ class TeaterfredPages < ActiveRecord::Base
       '/prices' => {
           :title => 'Priser og rabatter',
           :template => '/pages/tickets/prices.haml'
-      }
+      },
       '/singlesale' => {
           :title => 'Loessalg',
           :template => '/pages/tickets/singlesale.haml'

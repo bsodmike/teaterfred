@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :signed_in_user, :only => [:index, :new, :create]
+  before_filter :signed_in_user, :only => [:index]
   
   def index
     @users = User.all

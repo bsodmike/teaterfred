@@ -1,13 +1,25 @@
 %h3 Nyheder
-%table
-  - @news_items.each do |news_item|
-    %tr
-      %td= news_item.title
-      %td= news_item.place
-      - if current_user
-        %td= link_to 'Vis', news_item
-        %td= link_to 'Rediger', edit_news_item_path(news_item)
-        %td= link_to 'Slet', news_item, confirm: 'Er du sikker?', method: :delete
-%br/
-- if current_user
-  = link_to 'Opret nyhed', new_news_item_path
+- @news_items.each do |news_item|
+  .news
+  /= image_tag((news.try(:image) || 'noimageavailable.jpg'), :width => 180, :height => 150, :style => 'float:left;margin-right: 10px;')
+ 
+  .news_content{:style => 'float:left;width: 300px;'}
+    = raw(news_item.title)
+    %br/
+    = news_item.created_at.strftime('%d/%m/%y')
+    \-
+    = news_item.place
+    %br/
+    %br/
+    = raw(news_item.content)
+    %br/
+    %br/
+
+    - if current_user
+      .admin_box
+        = link_to 'Vis', news_item
+        = link_to 'Rediger', edit_news_item_path(news_item)
+        = link_to 'Slet', news_item, confirm: 'Er du sikker?', method: :delete
+      
+    %br/
+    %br/

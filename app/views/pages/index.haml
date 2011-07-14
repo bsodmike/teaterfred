@@ -1,16 +1,16 @@
 - @news.each do |news|
   .news
-    = image_tag((news.try(:image) || 'noimageavailable.jpg'), :width => 180, :height => 150, :style => 'float:left;margin-right: 10px;')
+    /= image_tag((news.try(:image) || 'noimageavailable.jpg'), :width => 180, :height => 150, :style => 'float:left;margin-right: 10px;')
    
     .news_content{:style => 'float:left;width: 300px;'}
-      %strong= news.title
+      = raw(news.title)
       %br/
       = news.created_at.strftime('%d/%m/%y')
       \-
       = news.place
       %br/
       %br/
-      = truncate news.content, :length => 90
+      = truncate(raw(news.content), :length => 90)
       %br/
       %br/
       = link_to 'Læs mere', news, :class => 'generic_link'
