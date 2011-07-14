@@ -6,9 +6,10 @@
       %td= url_for partner.link
       
       - if current_user
-        %td= link_to 'Vis', partner
-        %td= link_to 'Rediger', edit_partner_path(partner)
-        %td= link_to 'Slet', partner, confirm: 'Er du sikker?', method: :delete
+        .admin_box
+          %td= link_to 'Vis', partner
+          %td= link_to 'Rediger', edit_partner_path(partner)
+          %td= link_to 'Slet', partner, confirm: 'Er du sikker?', method: :delete
 %br/
 - if current_user
   = link_to 'Opret samarbejdspartner', new_partner_path

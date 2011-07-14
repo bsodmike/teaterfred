@@ -22,9 +22,10 @@
       %td
 
         - if current_user
-          = link_to 'Vis', gallery
-          = link_to 'Rediger', edit_gallery_path(gallery)
-          = link_to 'Slet', gallery, confirm: 'Er du sikker?', method: :delete
+          .admin_box
+            = link_to 'Vis', gallery
+            = link_to 'Rediger', edit_gallery_path(gallery)
+            = link_to 'Slet', gallery, confirm: 'Er du sikker?', method: :delete
     
 
 

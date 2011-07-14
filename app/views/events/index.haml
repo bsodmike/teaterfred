@@ -4,9 +4,10 @@
     %tr
       %td= event.title
       - if current_user
-        %td= link_to 'Vis', event
-        %td= link_to 'Rediger', edit_event_path(event)
-        %td= link_to 'Slet', event, confirm: 'Er du sikker?', method: :delete
+        .admin_box
+          %td= link_to 'Vis', event
+          %td= link_to 'Rediger', edit_event_path(event)
+          %td= link_to 'Slet', event, confirm: 'Er du sikker?', method: :delete
 %br/
 - if current_user
   = link_to 'Ny begivenhed', new_event_path
