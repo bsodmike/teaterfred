@@ -3,7 +3,7 @@
   - @partners.each do |partner|
     %tr
       %td= image_tag partner.image
-      %td= url_for partner.link, partner.link
+      %td= url_for partner.link
       
       - if current_user
         %td= link_to 'Vis', partner
