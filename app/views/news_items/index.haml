@@ -1,17 +1,9 @@
 %h3 Nyheder
 %table
-  %tr
-    %th Titel
-    %th Sted
-    %th Billede
-    %th
-    %th
-    %th
   - @news_items.each do |news_item|
     %tr
       %td= news_item.title
       %td= news_item.place
-      %td= news_item.image
       - if current_user
         %td= link_to 'Vis', news_item
         %td= link_to 'Rediger', edit_news_item_path(news_item)
