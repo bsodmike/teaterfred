@@ -12,6 +12,9 @@ a {
   color: #000 !important;
   text-decoration: underline !important;
 }
+.generic_link a, .generic_link a:hover, .generic_link a:active, .generic_link a:visited {
+  text-decoration: underline;
+}
 body {
   font-family: Arial, Helvetica, sans-serif;
   background: url('core/background.png') repeat-x scroll 0 170px;

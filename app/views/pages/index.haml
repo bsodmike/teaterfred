@@ -1,9 +1,9 @@
 - @news.each do |news|
   .news
-    /- if news.image?
-    = image_tag news.image || 'noimageavailable.jpg', :width => 180, :height => 150, :style => 'float:left;margin-right: 10px;'
-    /- else
-    /= image_tag 'noimageavailable.jpg', :width => 180, :height => 150, :style => 'float:left;margin-right: 10px;'
+    - if news.image
+      = image_tag news.image, :width => 180, :height => 150, :style => 'float:left;margin-right: 10px;'
+    - else
+      = image_tag 'noimageavailable.jpg', :width => 180, :height => 150, :style => 'float:left;margin-right: 10px;'
       
     .news_content{:style => 'float:left;width: 300px;'}
       %strong= news.title
@@ -14,6 +14,6 @@
       %br/
       %br/
       = truncate news.content, :length => 90
-      = link_to 'læs mere', news
+      = link_to 'Læs mere', news, :class => 'generic_link'
       %br/
 
