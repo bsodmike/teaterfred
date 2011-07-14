@@ -16,6 +16,10 @@ class TeaterfredPages < ActiveRecord::Base
         },
 
       # Tickets/Billetter
+      '/tickets' => {
+          :title => 'Billetter',
+          :template => '/pages/tickets/index.haml'
+      }
       '/become_member' => {
           :title => 'Bliv Medlem',
           :template => '/pages/tickets/become_member.haml'

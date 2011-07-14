@@ -19,15 +19,15 @@
     %br/
     Kommer snart!
     
-  %h4= link_to 'Billetter', '#'
+  %h4= link_to 'Billetter', '/tickets'
   %div
     = link_to 'Bliv medlem', '/become_member'
     %br/
-    = link_to 'Priser og rabatter', '#'
+    = link_to 'Priser og rabatter', '/prices'
     %br/
-    = link_to 'Billetter i løssalg', '#'
+    = link_to 'Billetter i løssalg', '/singlesale'
     
-  %h4= link_to 'Program', '#'
+  %h4= link_to 'Program', '/program'
   %div
     = link_to 'Voksenteater', '/adulttheater'
     %br/
@@ -56,25 +56,31 @@
     %div
       \-
       = link_to 'Nyt galleri', new_gallery_path
+      
     %b= link_to 'Billeder', images_path
     %div
       \-
       = link_to 'Nyt billede', new_image_path
+      
     %b= link_to 'Spillesteder', places_path
     %div
       = link_to 'Opret spillested', new_place_path
+      
     %b= link_to 'Nyheder', news_items_path
     %div
       \-
       = link_to 'Opret nyhed', new_news_item_path
+      
     %b= link_to 'Begivenheder', events_path
     %div
       \-
       = link_to 'Opret begivenhed', new_event_path
+      
     %b= link_to 'Samarbejdspartnere', partners_path
     %div
       \-
       = link_to 'Opret samarbejdspartner', new_partner_path
+      
     %b= link_to 'Ny bruger', new_user_path
     %div
     

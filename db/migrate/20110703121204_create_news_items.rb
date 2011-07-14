@@ -4,7 +4,7 @@ class CreateNewsItems < ActiveRecord::Migration
       t.string :title
       t.text :content
       t.string :place
-      t.string :image
+      t.string :image, :default => NULL
 
       t.timestamps
     end
