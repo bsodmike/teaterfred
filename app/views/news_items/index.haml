@@ -16,7 +16,7 @@
     %br/
 
     - if current_user
-      .admin_box
+      .admin_box{:style => 'width: 120px;text-align:center;'}
         = link_to 'Vis', news_item
         = link_to 'Rediger', edit_news_item_path(news_item)
         = link_to 'Slet', news_item, confirm: 'Er du sikker?', method: :delete

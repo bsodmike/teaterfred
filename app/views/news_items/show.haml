@@ -8,7 +8,7 @@
   = image_tag @news_item.image if @news_item.image?
   
 - if current_user
-  .admin_box
+  .admin_box{:style => 'width:60px;text-align:center;'}
     = link_to 'Rediger', edit_news_item_path(@news_item)
-    
+%br/
 = link_to 'Tilbage', news_items_path
