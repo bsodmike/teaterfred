@@ -8,7 +8,7 @@
       = news.created_at.strftime('%d/%m/%y')
       %br/
       %br/
-      = truncate(raw(news.content), :length => 90)
+      = raw(news.content)
       %br/
       %br/
       = news.place
