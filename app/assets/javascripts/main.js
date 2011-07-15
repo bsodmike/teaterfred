@@ -21,13 +21,6 @@ $(function() {
   })
   
   
-  tinyMCE.init({
-    'mode' : 'textareas',
-    'theme' : 'simple',
-    'editor_selected' : 'rich_text',
-    'content_css' : '/stylesheets/tiny_mce_content.css'
-  });
-  
   function eventRenderer(event, element, view) {
       if (view.start.getMonth() == event.start.getMonth()) {
           var day = (view.start.getDay()-1) + event.start.getDate();
