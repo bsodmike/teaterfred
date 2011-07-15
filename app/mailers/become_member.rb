@@ -3,7 +3,7 @@ class BecomeMember < ActionMailer::Base
   
   def test
     @url = '/become_member'
-    mail(:to => 'info@teaterfred.dk', :subject => "Ansøgning om medlemsskab")
+    mail(:to => 'info@teaterfred.dk', :subject => "Ansoegning om medlemsskab")
   end
   
 end
