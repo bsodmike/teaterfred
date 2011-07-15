@@ -5,7 +5,7 @@
 %p
   = @news_item.place
 %p
-  = image_tag @news_item.image, :width => 150, :height => 150 if @news_item.image?
+  = image_tag (@news_item.image, :width => 150, :height => 150) if @news_item.image?
   
 - if current_user
   .admin_box{:style => 'width:60px;text-align:center;'}
