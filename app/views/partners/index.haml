@@ -4,7 +4,7 @@
     %tr
       %td= image_tag partner.image
       %td
-        %a{:href => '#{partner.link}'}= partner.link
+        %a{:href => partner.link}= partner.link
     %tr  
       - if current_user
         %td.admin_box{:style => 'width:120px;text-align:center;'}
