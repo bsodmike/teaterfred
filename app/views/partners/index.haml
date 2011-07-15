@@ -5,11 +5,11 @@
       %td= image_tag partner.image
       %td= url_for partner.link
       
-      - if current_user
-        .admin_box
-          = link_to 'Vis', partner
-          = link_to 'Rediger', edit_partner_path(partner)
-          = link_to 'Slet', partner, confirm: 'Er du sikker?', method: :delete
+    - if current_user
+      .admin_box
+        = link_to 'Vis', partner
+        = link_to 'Rediger', edit_partner_path(partner)
+        = link_to 'Slet', partner, confirm: 'Er du sikker?', method: :delete
 %br/
 - if current_user
   = link_to 'Opret samarbejdspartner', new_partner_path
