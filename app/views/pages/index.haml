@@ -6,13 +6,17 @@
       = raw(news.title)
       %br/
       = news.created_at.strftime('%d/%m/%y')
-      \-
-      = news.place
       %br/
       %br/
       = truncate(raw(news.content), :length => 90)
       %br/
       %br/
+      = news.place
+      %br/
+      = news.date
+      %br/
+      = news.age_range
       = link_to 'Læs mere', news, :class => 'generic_link'
+      %br/
       %br/
 

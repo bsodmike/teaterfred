@@ -12,8 +12,8 @@ a {
   color: #000 !important;
   text-decoration: underline !important;
 }
-.generic_link a, .generic_link a:hover, .generic_link a:active, .generic_link a:visited {
-  text-decoration: underline;
+.generic_link {
+  text-decoration: underline !important;
 }
 body {
   font-family: Arial, Helvetica, sans-serif;

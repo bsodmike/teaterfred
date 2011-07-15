@@ -16,12 +16,25 @@
     %br/
     = f.text_area :content, :class => "mceEditor"
   .field
+    = f.label :billede
+    %br/
+    = f.file_field :image
+  %br/
+  %br/
+  %i Ikke nødvendigt at udfylde
+  %br/
+  .field
     = f.label :sted
     %br/
     = f.text_field :place
   .field
-    = f.label :billede
+    = f.label :dato
     %br/
-    = f.file_field :image
+    = f.text_field :date
+  .field
+    = f.label :aldersgruppe
+    %br/
+    = f.text_field :age_range
+  
   .actions
     = f.submit 'Gem'
