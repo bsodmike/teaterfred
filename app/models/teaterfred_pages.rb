@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 class TeaterfredPages < ActiveRecord::Base
 
   @@pages = {
