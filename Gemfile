@@ -4,14 +4,12 @@ gem 'rails', '3.1.0.rc4'
 
 # Asset template engines
 gem 'sass-rails', "~> 3.1.0.rc"
-#gem 'blueprint-rails'
 gem 'coffee-script'
 gem 'uglifier'
 gem 'haml'
 gem 'sprockets', "2.0.0.beta.10"
 gem 'jquery-rails'
 # End
-
 
 gem 'carrierwave'
 

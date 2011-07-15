@@ -38,5 +38,7 @@ module Teaterfred
 
     # Enable the asset pipeline
     config.assets.enabled = true
+    
+    config.gem 'tiny_mce'
   end
 end

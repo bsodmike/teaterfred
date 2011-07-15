@@ -1,4 +1,5 @@
 class NewsItemsController < ApplicationController
+  uses_tiny_mce
   
   def index
     @news_items = NewsItem.all

@@ -1,37 +1,4 @@
-$(function() {
-	
-  var uploader = new plupload.Uploader({
-    runtimes : "html5",
-    browse_button : 'pickfiles',
-    max_file_size : '10mb',
-    url : "",
-    multipart: true,
-    multipart_params: {
-     "authenticity_token" : '<%= form_authenticity_token %>'
-    }
-  });
-
-  uploader.bind('FilesAdded', function(up, files) {
-    $.each(files, function(i, file) {
-      $('#filelist').append(
-        '<div id="' + file.id + '">' +
-        'File: ' + file.name + ' (' + plupload.formatSize(file.size) + ') <b></b>' +
-        '</div>'
-        );
-      });
-    });
-
-  uploader.bind('UploadProgress', function(up, file) {
-    $('#' + file.id + " b").html(file.percent + "%");
-  });
-
-  $('#uploadfiles').click(function(e) {
-    uploader.start();
-    e.preventDefault();
-  });
-
-  uploader.init();
-	
+$(function() {	
 	
   $(".menu").accordion({
     event: 'mouseover'
@@ -53,8 +20,14 @@ $(function() {
       dayNamesShort:['S', 'M', 'T', 'O', 'T', 'F', 'L']
   })
   
-  $(".text_field").markItUp(mySettings);
-
+  
+  tinyMCE.init({
+    'mode' : 'textareas',
+    'theme' : 'simple',
+    'editor_selected' : 'rich_text',
+    'content_css' : '/stylesheets/tiny_mce_content.css'
+  });
+  
   function eventRenderer(event, element, view) {
       if (view.start.getMonth() == event.start.getMonth()) {
           var day = (view.start.getDay()-1) + event.start.getDate();
