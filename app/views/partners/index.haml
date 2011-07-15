@@ -7,9 +7,9 @@
       
       - if current_user
         .admin_box
-          %td= link_to 'Vis', partner
-          %td= link_to 'Rediger', edit_partner_path(partner)
-          %td= link_to 'Slet', partner, confirm: 'Er du sikker?', method: :delete
+          = link_to 'Vis', partner
+          = link_to 'Rediger', edit_partner_path(partner)
+          = link_to 'Slet', partner, confirm: 'Er du sikker?', method: :delete
 %br/
 - if current_user
   = link_to 'Opret samarbejdspartner', new_partner_path
