@@ -17,7 +17,8 @@ $(function() {
       eventAfterRender: eventDayHighlighter,
       viewDisplay: clearDayHighlights,
       header: {left: 'prev', center: 'title', right: 'next'},     
-      dayNamesShort:['S', 'M', 'T', 'O', 'T', 'F', 'L']
+      dayNamesShort:['S', 'M', 'T', 'O', 'T', 'F', 'L'],
+      monthNames:['January', 'February', 'March', 'April', 'May', 'June', 'Juadsly', 'August', 'September', 'October', 'November', 'December']
   })
   
   
