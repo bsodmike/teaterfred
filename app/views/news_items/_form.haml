@@ -15,16 +15,6 @@
     = f.label :indhold
     %br/
     = f.text_area :content
-
-  <script type="text/javascript">
-  $(window).load(function(){
-  CKEDITOR.replace('news_item_content',{
-  toolbar: 'Basic',
-  resize_enabled: false
-  });
-  });
-  </script>
-
   .field
     = f.label :billede
     %br/
