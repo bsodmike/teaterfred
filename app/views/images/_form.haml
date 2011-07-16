@@ -1,4 +1,4 @@
-= form_for @image, :html => {:multipart => true} do |f|
+= form_for @image, :html => { :class => "upload", :multipart => true} do |f|
   %table
     %tr
       %td= f.label :titel
@@ -8,35 +8,9 @@
       %td= f.select(:gallery_id, @gallery.map { |g| [g.title, g.id]}) # "maps" the @gallery instance variable, making it available
     %tr
       %td= f.label :billede
+      %td= f.file_field :image, :rel => images_path(@image)
     %tr
       %td
       %td
         = f.submit 'Opret'
-        
-  - key = Rails.application.config.session_options[:key]
-
-  = content_for :scripts do
-    :javascript
-      var upload_params = {
-        '#{key}' : '#{cookies[key]}',
-        '#{request_forgery_protection_token}' : '#{form_authenticity_token}',
-        '_http_accept': 'application/javascript'
-      };
-      var url = $('#image_image').attr('rel');
-      $('#image_image').uploadify({
-        'uploader'     : '/assets/uploadify.swf',
-        'script'       : url,
-        'fileDataName' : 'photo[image]',
-        'fileExt'      : '*.png;*.jpg;*.gif',
-        'cancelImg'    : '/images/cancel.png',
-        'multi'        : true,
-        'scriptData'   : upload_params,
-        'auto'         : true,
-        'onComplete'   : function(e, id, obj, response, data) {
-          $('#photos').append(response);
-        }
-      });
-  
-  #photos
-    = fields_for Image.new do |f|
-      = f.file_field :image, :rel => images_path(@image)
+      
