@@ -11,6 +11,7 @@ gem 'sprockets', "2.0.0.beta.10"
 gem 'jquery-rails'
 # End
 gem 'carrierwave'
+gem 'RedCloth'
 
 group :production do
   gem 'therubyracer-heroku', '0.8.1.pre3'

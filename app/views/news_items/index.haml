@@ -4,14 +4,14 @@
     = image_tag news_item.image, :width => 180, :height => 150, :style => 'float:left;margin-right: 10px;' if news_item.image?
   %br/
   .news_content{:style => 'float:left;width: 300px;'}
-    = raw(news_item.title)
+    = raw (RedCloth.new(news_item.title).to_html)
     %br/
     = news_item.created_at.strftime('%d/%m/%y')
     \-
     = news_item.place
     %br/
     %br/
-    = raw(news_item.content)
+    = raw (RedCloth.new(news_item.content).to_html)
     %br/
     %br/
 

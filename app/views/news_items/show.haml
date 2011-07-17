@@ -1,7 +1,7 @@
 %p
-  = raw(@news_item.title)
+  = raw (RedCloth.new(@news_item.title).to_html)
 %p
-  = raw(@news_item.content)
+  = raw (RedCloth.new(@news_item.content).to_html)
 %p
   = @news_item.place
 %p
