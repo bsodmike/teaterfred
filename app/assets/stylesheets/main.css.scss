@@ -240,10 +240,11 @@ div {
   margin-top: 20px;
   padding: 4px;
   width:180px;
-  height:400px;
+  height:500px;
   border:1px solid gray;
   
   .border {
+    padding: 2px;
     border: 1px solid lightgray;
   }
 }
