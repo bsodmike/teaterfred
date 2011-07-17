@@ -10,6 +10,7 @@ class NewsItemsController < ApplicationController
   
   def new
     @news_item = NewsItem.new
+    @image = Image.all
   end
 
   def edit
@@ -19,7 +20,6 @@ class NewsItemsController < ApplicationController
   def create
     @news_item = NewsItem.new(params[:news_item])
     
-    #@news_itemRedCloth.new(params[:c]).to_html
 
     if @news_item.save
       redirect_to(@news_item, :notice => 'Nyheden blev oprettet')
