@@ -58,9 +58,9 @@
   .field
     = f.label :billede
     %br/
-    /= f.file_field :image
+    = f.file_field :image
 
-    = f.select (:image, @image.map {|i| [i.id, i.title] })
+    /= f.select (:image, @image.map {|i| [i.id, i.title] })
   %br/
   %br/
   %i Ikke nødvendigt at udfylde

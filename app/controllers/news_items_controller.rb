@@ -10,7 +10,6 @@ class NewsItemsController < ApplicationController
   
   def new
     @news_item = NewsItem.new
-    @image = Image.all
   end
 
   def edit
