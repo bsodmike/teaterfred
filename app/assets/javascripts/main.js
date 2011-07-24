@@ -18,7 +18,7 @@ $(function() {
       viewDisplay: clearDayHighlights,
       header: {left: 'prev', center: 'title', right: 'next'},     
       dayNamesShort:['S', 'M', 'T', 'O', 'T', 'F', 'L'],
-      monthNames:['January', 'February', 'March', 'April', 'May', 'June', 'Juadsly', 'August', 'September', 'October', 'November', 'December']
+      monthNames:['Januar', 'Februar', 'Marts', 'April', 'Maj', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'December']
   });
   
   
