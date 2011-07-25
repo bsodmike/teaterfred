@@ -1,16 +1,14 @@
-%p#notice= notice
 %p
-  %b Titel:
-  = @news_item.title
+  = raw (RedCloth.new(@news_item.title).to_html)
 %p
-  %b Indhold:
-  = @news_item.content
+  = raw (RedCloth.new(@news_item.content).to_html)
 %p
-  %b Sted:
   = @news_item.place
 %p
-  %b Billede:
-  = @news_item.image
-= link_to 'Rediger', edit_news_item_path(@news_item)
-|
+  = image_tag @news_item.image, :width => 150, :height => 150 if @news_item.image?
+  
+- if current_user
+  .admin_box{:style => 'width:60px;text-align:center;'}
+    = link_to 'Rediger', edit_news_item_path(@news_item)
+%br/
 = link_to 'Tilbage', news_items_path

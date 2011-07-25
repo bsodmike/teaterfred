@@ -1,3 +1,6 @@
+%h3 Ny bruger
+
+
 = form_for @user do |f|
   - if @user.errors.any?
     .error_messages
@@ -11,14 +14,14 @@
     = f.text_field :email
 
   .field
-    = f.label :password
+    = f.label :kodeord
     %br/
     = f.password_field :password
 
   .field
-    = f.label :password_confirmation
+    = f.label :gentag_kodeord
     %br/
     = f.password_field :password_confirmation
 
   .actions
-    = f.submit
+    = f.submit 'Opret bruger'

@@ -1,15 +1,13 @@
 %h3 Begivenheder
 %table
-  %tr
-    %th Titel
-    %th
-    %th
-    %th
   - @events.each do |event|
     %tr
       %td= event.title
-      %td= link_to 'Vis', event
-      %td= link_to 'Rediger', edit_event_path(event)
-      %td= link_to 'Slet', event, confirm: 'Er du sikker?', method: :delete
+      - if current_user
+        .admin_box
+          %td= link_to 'Vis', event
+          %td= link_to 'Rediger', edit_event_path(event)
+          %td= link_to 'Slet', event, confirm: 'Er du sikker?', method: :delete
 %br/
-= link_to 'Ny begivenhed', new_event_path
+- if current_user
+  = link_to 'Ny begivenhed', new_event_path

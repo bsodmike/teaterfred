@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110704200908) do
+ActiveRecord::Schema.define(:version => 20110715095315) do
 
   create_table "boards", :force => true do |t|
     t.string   "name"
@@ -25,8 +25,12 @@ ActiveRecord::Schema.define(:version => 20110704200908) do
     t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
+<<<<<<< HEAD
     t.date     "published_on"
     t.string   "start"
+=======
+    t.string   "published_on"
+>>>>>>> 88160cf312e3deea8b89ba90337c2c1c671babc0
   end
 
   create_table "galleries", :force => true do |t|
@@ -52,6 +56,8 @@ ActiveRecord::Schema.define(:version => 20110704200908) do
     t.string   "image"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "date"
+    t.string   "age_range"
   end
 
   create_table "pages", :force => true do |t|
@@ -85,6 +91,9 @@ ActiveRecord::Schema.define(:version => 20110704200908) do
     t.string   "password_digest"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "auth_token"
+    t.string   "password_reset_token"
+    t.datetime "password_reset_sent_at"
   end
 
 end

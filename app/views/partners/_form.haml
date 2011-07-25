@@ -8,12 +8,13 @@
         - @partner.errors.full_messages.each do |msg|
           %li= msg
   .field
-    = f.label :image
+    = f.label :billede
     %br/
-    = f.text_field :image
+    = f.file_field :image
   .field
     = f.label :link
+    %i Husk at skrive http:// foran linket.
     %br/
     = f.text_field :link
   .actions
-    = f.submit
+    = f.submit 'Gem'

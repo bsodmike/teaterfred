@@ -1,70 +1,96 @@
 .menu
-  %ul
-    %li
-      = link_to 'Om os', '/about'
-      %ul.submenu
-        %li= link_to 'Bestyrelsen', '/board'
-        %li= link_to 'Vedtægter', '/regulations'
-        %li= link_to 'Samarbejdspartnere', partners_path
-    %li
-      = link_to 'Billetter'#, tickets_path
-      %ul.submenu
-        %li= link_to 'Bliv medlem', '/become_member'
-        %li= link_to 'Priser og rabatter'
-        %li= link_to 'Billetter i løssalg'
-    %li
-      = link_to 'Program'
-      %ul.submenu
-        %li= link_to 'Voksenteater', '/adulttheater'
-        %li= link_to 'Børneteater', '/childtheater'
-        %li= link_to 'Gadeteater', '/streettheater'
-        %li= link_to 'Teaterture', '/theatertours'
-    %li
-      = link_to 'Spillesteder'
-      %ul.submenu
-        %li
-          = link_to 'Fredensborg'
-        %li
-          = link_to 'Humlebæk'
-        %li
-          = link_to 'Nivå'
-        %li
-          = link_to 'Kokkedal'
-    %li
-      = link_to 'Galleri', galleries_path
-      %ul.submenu
-        - Gallery.all.each do |gallery|
-          %li
-            = link_to gallery.title, gallery
-    %li
-      = link_to 'Kontakt', contact_path
+  %h4= link_to 'Om os', '/about'
+  %div
+    = link_to 'Bestyrelsen', '/board'
+    %br/
+    = link_to 'Vedtægter', '/regulations'
+    %br/
+    = link_to 'Samarbejdspartnere', partners_path
+      
+  %h4= link_to 'Spillesteder', '#'
+  %div
+    = link_to 'Fredensborg', '#'
+    %br/
+    = link_to 'Humlebæk', '#'
+    %br/
+    = link_to 'Nivå', '#'
+    %br/
+    = link_to 'Kokkedal', '#'
+    %br/
+    Kommer snart!
+    
+  %h4= link_to 'Billetter', '/tickets'
+  %div
+    = link_to 'Bliv medlem', '/become_member'
+    %br/
+    = link_to 'Priser og rabatter', '/prices'
+    %br/
+    = link_to 'Billetter i løssalg', '/singlesale'
+    
+  %h4= link_to 'Program', '/program'
+  %div
+    = link_to 'Voksenteater', '/adulttheater'
+    %br/
+    = link_to 'Børneteater', '/childtheater'
+    %br/
+    = link_to 'Gadeteater', '/streettheater'
+    %br/
+    = link_to 'Teaterture', '/theatertours'
+      
+  %h4= link_to 'Galleri', galleries_path
+  %div
+    - Gallery.all.each do |gallery|
+      = link_to gallery.title, gallery
+      %br/
+  
+  %h4= link_to 'Kontakt', contact_path
+  %div
 
   %br/
   %br/
 
-  %ul.admin_menu
-    - if current_user
-      %li
-        %b Admin
-      %li
-        = link_to 'Galleri', galleries_path
+- if current_user
+  %b Admin
+  .admin_box
+    .menu
+      %b= link_to 'Galleri', galleries_path
+      %div
         \-
         = link_to 'Nyt galleri', new_gallery_path
-      %li
-        = link_to 'Billeder', images_path
+        
+      %b= link_to 'Billeder', images_path
+      %div
         \-
         = link_to 'Nyt billede', new_image_path
-      %li
-        = link_to 'Spillesteder', places_path
-      %li
-        = link_to 'Nyheder', news_items_path
+        
+      %b= link_to 'Spillesteder', places_path
+      %div
+        = link_to 'Opret spillested', new_place_path
+        
+      %b= link_to 'Nyheder', news_items_path
+      %div
         \-
-        = link_to 'Opret nyhed', new_news_path
-      %li
-        = link_to 'Begivenheder', events_path
+        = link_to 'Opret nyhed', new_news_item_path
+        
+      %b= link_to 'Begivenheder', events_path
+      %div
         \-
         = link_to 'Opret begivenhed', new_event_path
-      %li
-        = link_to 'Ny bruger', new_user_path
-      %li
-        = link_to 'Log ud', signout_path, :method => :delete
+        
+      %b= link_to 'Samarbejdspartnere', partners_path
+      %div
+        \-
+        = link_to 'Opret samarbejdspartner', new_partner_path
+        
+      %b= link_to 'Ny bruger', new_user_path
+      %div
+      
+      
+    %br/
+    %br/  
+      
+    %u Bruger:
+    %br/
+    = current_user.email
+    \-
+    = link_to 'log ud', signout_path, :method => :delete

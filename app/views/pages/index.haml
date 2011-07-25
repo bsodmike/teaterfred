@@ -1,4 +1,5 @@
 - @news.each do |news|
+<<<<<<< HEAD
   %span{:style => "float:left;width: 600px;"}
     = image_tag "/images/alder_ingen_hindring.jpg", :width => 140, :height => 110
     %br/
@@ -13,3 +14,27 @@
     = link_to 'læs mere', news
 
   %br/
+=======
+  .news
+    = image_tag news.image, :width => 180, :height => 150, :style => 'float:left;margin-right: 10px;' if news.image?
+   
+    .news_content{:style => 'float:left;width: 300px;'}
+      = raw(RedCloth.new(news.title).to_html)
+      %br/
+      = news.created_at.strftime('%d/%m/%y')
+      %br/
+      %br/
+      = raw(truncate(RedCloth.new(news.content).to_html, :length => 90))
+      %br/
+      %br/
+      = news.place
+      %br/
+      = news.date
+      %br/
+      = news.age_range
+      %br/
+      = link_to 'Læs mere', news, :class => 'generic_link'
+      %br/
+      %br/
+
+>>>>>>> 88160cf312e3deea8b89ba90337c2c1c671babc0

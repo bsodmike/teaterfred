@@ -1,5 +1,4 @@
-= form_for @image, :html => {:multipart => true} do |f|
-  = flash[:notice]
+= form_for @image, :html => { :class => "upload", :multipart => true} do |f|
   %table
     %tr
       %td= f.label :titel
@@ -7,10 +6,13 @@
     %tr
       %td= f.label :galleri
       %td= f.select(:gallery_id, @gallery.map { |g| [g.title, g.id]}) # "maps" the @gallery instance variable, making it available
+      %td
+        %small Hvis listen er blank, så er der ingen gallerier oprettet.
     %tr
       %td= f.label :billede
-      %td= f.file_field :image
+      %td= f.file_field :image, :rel => images_path(@image)
     %tr
       %td
       %td
         = f.submit 'Opret'
+      

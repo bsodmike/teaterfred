@@ -1,8 +1,6 @@
 Teaterfred::Application.routes.draw do
   
   resources :news_items
-
-  resources :news
   resources :events
   resources :boards
   resources :partners
@@ -11,6 +9,7 @@ Teaterfred::Application.routes.draw do
   resources :galleries
   resources :users
   resources :sessions
+  resources :password_resets
 
   # SESSIONS - sign -in/out
   match '/signin', :to => 'sessions#new'

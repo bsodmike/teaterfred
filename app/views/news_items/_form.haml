@@ -1,4 +1,4 @@
-= form_for@news_item,:html => {:multipart => true} do |f|
+= form_for @news_item, :html => {:multipart => true} do |f|
   - if @news_item.errors.any?
     #error_explanation
       %h2
@@ -11,17 +11,72 @@
     = f.label :titel
     %br/
     = f.text_field :title
+  .textile_box
+    .border
+      h3. Stor titel
+      %h3{:style => 'margin:0;padding:0;'} Stor titel
+    
+    %p.border   
+      *fed*
+      %strong fed
+    
+    %p.border
+      _kursiv_
+      %i kursiv
+      
+    %p.border
+      "link":http://link.com
+      = link_to "http://link.com", "http://link.com", :class => 'generic_link' 
+    
+    %p.border    
+      * punkt 1
+      %br/
+      * punkt 2
+      %ul
+        %li punk 1
+        %li punkt 2
+      
+    %p.border
+      \# punkt 1
+      %br/
+      \# punkt 2
+      %ol
+        %li punkt
+        %li punkt
+    
+    %p.border
+      %small Dette er en reference til hvordan du kan formatere din nyheds indhold.
+      
+      %small Det kan også bruges i titlen.
+      
+    %br/
   .field
     = f.label :indhold
     %br/
     = f.text_area :content
+      
+  .field
+    = f.label :billede
+    %br/
+    = f.file_field :image
+
+    /= f.select (:image, @image.map {|i| [i.id, i.title] })
+  %br/
+  %br/
+  %i Ikke nødvendigt at udfylde
+  %br/
   .field
     = f.label :sted
     %br/
     = f.text_field :place
   .field
-    = f.label :billede
+    = f.label :dato
     %br/
-    = f.file_field :image
+    = f.text_field :date
+  .field
+    = f.label :aldersgruppe
+    %br/
+    = f.text_field :age_range
+  
   .actions
-    = f.submit 'Opret'
+    = f.submit 'Gem'

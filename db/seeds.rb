@@ -20,7 +20,7 @@ NewsItem.create([
         image: ''
     }
 ])
-
+=begin
 Place.create([
     {
         name: 'Huset',

@@ -1,17 +1,15 @@
-%h1 Listing partners
+%h3 Samarbejdspartnere
 %table
-  %tr
-    %th Image
-    %th Link
-    %th
-    %th
-    %th
   - @partners.each do |partner|
     %tr
-      %td= partner.image
-      %td= partner.link
-      %td= link_to 'Show', partner
-      %td= link_to 'Edit', edit_partner_path(partner)
-      %td= link_to 'Destroy', partner, confirm: 'Are you sure?', method: :delete
+      %td= image_tag partner.image
+      %td= link_to partner.link, partner.link, :class => 'generic_link'
+    %tr  
+      - if current_user
+        %td.admin_box{:style => 'width:120px;text-align:center;'}
+          = link_to 'Vis', partner
+          = link_to 'Rediger', edit_partner_path(partner)
+          = link_to 'Slet', partner, confirm: 'Er du sikker?', method: :delete
 %br/
-= link_to 'New Partner', new_partner_path
+- if current_user
+  = link_to 'Opret samarbejdspartner', new_partner_path

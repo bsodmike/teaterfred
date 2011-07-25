@@ -1,5 +1,6 @@
 !!!
 %html
+<<<<<<< HEAD
   %head
 <<<<<<< HEAD
     %title Teaterforeningen Fredensborg Kommune
@@ -18,31 +19,52 @@
   
   = csrf_meta_tags
 >>>>>>> 9ddce6616733a28c6c44834d70dd485b0a1146a9
+=======
+	%head
+	%title Teaterforeningen Fredensborg Kommune
+	= stylesheet_link_tag "application"
+	= javascript_include_tag "application"
+	= javascript_include_tag '//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js', '//ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js', 'jquery.lightbox-0.5.min.js',
+	'fullcalendar',
+	'jquery.qtip.min',
+	'try'
+	= csrf_meta_tags
+>>>>>>> 88160cf312e3deea8b89ba90337c2c1c671babc0
 
-  %body
+	%body
 
-    .container
+		.container
 
-      #header
-        = render 'layouts/header'
+			#header
+				= render 'layouts/header'
 
-      %section
-        #core
-          #menu
-            = render 'layouts/menu'
-            
-          #side_content
-            = render 'layouts/side_content'
+			%section
+				#core
+					#menu
+						= render 'layouts/menu'
+						
+					#side_content
+						= render 'layouts/side_content'
 
-          #main_content
-            .spacer{:style => 'float:left;margin-right: 30px;' }
-              = image_tag 'core/spacer.png'
-            .spacer{:style => 'float:right;margin-left: 10px;' }
-              = image_tag 'core/spacer.png'
-
-            .link{:style => 'color: grey;margin-top: 10px;'}
-              = link_to 'Tilbage', request.headers['HTTP_REFERER']
-            %br/
-            = yield
-    #footer
-      = render 'layouts/footer'
+					#main_content
+						.spacer{:style => 'float:left' }
+							= image_tag 'core/spacer.png'
+						.spacer{:style => 'float:right' }
+							= image_tag 'core/spacer.png'
+						
+						- if current_page?('/')
+							%br/
+						- else
+							.link{:style => 'color: grey;padding-top: 10px;padding-left:20px;'}
+								= link_to 'Tilbage', request.headers['HTTP_REFERER']
+							%br/
+						
+						- flash.each do |key, value|
+							.flash{:id => key} 
+								= value
+						
+						#content_wrapper		
+							= yield
+		#footer
+			= render 'layouts/footer'
+			= yield :scripts

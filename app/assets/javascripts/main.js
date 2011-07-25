@@ -1,4 +1,8 @@
-$(function() {
+$(function() {	
+	
+  $(".menu").accordion({
+    event: 'mouseover'
+  });
 
   $("#event_published_on").datepicker();
   $("#event_start").datepicker();
@@ -24,9 +28,11 @@ $(function() {
       eventAfterRender: eventDayHighlighter,
       viewDisplay: clearDayHighlights,
       header: {left: 'prev', center: 'title', right: 'next'},     
-      dayNamesShort:['S', 'M', 'T', 'O', 'T', 'F', 'L']
-  })
-
+      dayNamesShort:['S', 'M', 'T', 'O', 'T', 'F', 'L'],
+      monthNames:['Januar', 'Februar', 'Marts', 'April', 'Maj', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'December']
+  });
+  
+  
   function eventRenderer(event, element, view) {
       if (view.start.getMonth() == event.start.getMonth()) {
           var day = (view.start.getDay()-1) + event.start.getDate();
