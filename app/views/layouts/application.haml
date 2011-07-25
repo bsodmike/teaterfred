@@ -2,6 +2,8 @@
 %html
 	%head
 	%title Teaterforeningen Fredensborg Kommune
+	/[if lt IE 9]
+  %script { :src => "http://html5shiv.googlecode.com/svn/trunk/html5.js" }
 	= stylesheet_link_tag "application"
 	= javascript_include_tag "application"
 	= javascript_include_tag '//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js', '//ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js', 'jquery.lightbox-0.5.min.js',
@@ -9,8 +11,7 @@
 	'jquery.qtip.min',
 	'try'
 	= csrf_meta_tags
-  /[if lt IE 9]
-  %script { :src => "http://html5shiv.googlecode.com/svn/trunk/html5.js" }
+  
 
 
 	%body
