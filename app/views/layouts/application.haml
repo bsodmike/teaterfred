@@ -1,47 +1,47 @@
 !!!
 %html
-	%head
-	%title Teaterforeningen Fredensborg Kommune
-	= stylesheet_link_tag "application"
-	= javascript_include_tag "application"
-	= javascript_include_tag 'jquery.min', 'jquery-ui.min'
-	= javascript_include_tag 'jquery.lightbox-0.5.min', 'fullcalendar', 'jquery.qtip.min', 'try'
-	= csrf_meta_tags
+  %head
+    %title Teaterforeningen Fredensborg Kommune
+    = stylesheet_link_tag "application"
+    = javascript_include_tag "application"
+    = javascript_include_tag 'jquery.min', 'jquery-ui.min'
+    = javascript_include_tag 'jquery.lightbox-0.5.min', 'fullcalendar', 'jquery.qtip.min', 'try'
+    = csrf_meta_tags
 
-	%body
+  %body
 
-		.container
+    .container
 
-			#header
-				= render 'layouts/header'
+      #header
+        = render 'layouts/header'
 
-			%section
-				#core
-					#menu
-						= render 'layouts/menu'
-						
-					#side_content
-						= render 'layouts/side_content'
-
-					#main_content
-						.spacer{:style => 'float:left' }
-							= image_tag 'core/spacer.png'
-						.spacer{:style => 'float:right' }
-							= image_tag 'core/spacer.png'
-						
-						- if current_page?('/')
-							%br/
-						- else
-							.link{:style => 'color: grey;padding-top: 10px;padding-left:20px;'}
-								= link_to 'Tilbage', request.headers['HTTP_REFERER']
-							%br/
-						
-						- flash.each do |key, value|
-							.flash{:id => key} 
-								= value
-						
-						#content_wrapper		
-							= yield
-		#footer
-			= render 'layouts/footer'
-			= yield :scripts
+      %section
+        #core
+          #menu
+            = render 'layouts/menu'
+    				
+          #side_content
+            = render 'layouts/side_content'
+    
+          #main_content
+            .spacer{:style => 'float:left' }
+              = image_tag 'core/spacer.png'
+            .spacer{:style => 'float:right' }
+              = image_tag 'core/spacer.png'
+    				
+            - if current_page?('/')
+              %br/
+            - else
+              .link{:style => 'color: grey;padding-top: 10px;padding-left:20px;'}
+                = link_to 'Tilbage', request.headers['HTTP_REFERER']
+              %br/
+    				
+            - flash.each do |key, value|
+              .flash{:id => key} 
+                = value
+    				
+            #content_wrapper		
+              = yield
+    #footer
+      = render 'layouts/footer'
+      = yield :scripts
