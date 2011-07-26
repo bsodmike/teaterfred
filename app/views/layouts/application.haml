@@ -1,5 +1,6 @@
 !!!
 %html
+<<<<<<< HEAD
   %head
     %title Teaterforeningen Fredensborg Kommune
     = stylesheet_link_tag "application"
@@ -7,6 +8,20 @@
     = javascript_include_tag 'jquery.min', 'jquery-ui.min'
     = javascript_include_tag 'jquery.lightbox-0.5.min', 'fullcalendar', 'jquery.qtip.min', 'try'
     = csrf_meta_tags
+=======
+	%head
+	%title Teaterforeningen Fredensborg Kommune
+	/[if lt IE 9]
+  %script { :src => "http://html5shiv.googlecode.com/svn/trunk/html5.js" }
+	= stylesheet_link_tag "application"
+	= javascript_include_tag "application"
+	= javascript_include_tag '//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js', '//ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js', 'jquery.lightbox-0.5.min.js',
+	'fullcalendar',
+	'jquery.qtip.min',
+	'try'
+	= csrf_meta_tags
+  
+>>>>>>> parent of ce11d35... added program index
 
   %body
 
