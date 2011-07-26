@@ -11,12 +11,8 @@ gem 'sprockets', "2.0.0.beta.10"
 gem 'jquery-rails'
 # End
 gem 'carrierwave'
-<<<<<<< HEAD
 
-gem 'inherited_resources'
-=======
 gem 'RedCloth'
->>>>>>> 88160cf312e3deea8b89ba90337c2c1c671babc0
 
 group :production do
   gem 'therubyracer-heroku', '0.8.1.pre3'

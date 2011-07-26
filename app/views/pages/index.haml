@@ -1,5 +1,4 @@
 - @news.each do |news|
-<<<<<<< HEAD
   %span{:style => "float:left;width: 600px;"}
     = image_tag "/images/alder_ingen_hindring.jpg", :width => 140, :height => 110
     %br/
@@ -14,7 +13,6 @@
     = link_to 'læs mere', news
 
   %br/
-=======
   .news
     = image_tag news.image, :width => 180, :height => 150, :style => 'float:left;margin-right: 10px;' if news.image?
    
@@ -36,5 +34,3 @@
       = link_to 'Læs mere', news, :class => 'generic_link'
       %br/
       %br/
-
->>>>>>> 88160cf312e3deea8b89ba90337c2c1c671babc0

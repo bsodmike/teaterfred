@@ -5,16 +5,9 @@
       %tr
         %td= gallery.title
         %td.image_box
-<<<<<<< HEAD:app/views/galleries/show.haml.kill
-          = link_to ( image_tag gallery.image, :width => 100, :height => 100), '#'
-<<<<<<< HEAD:app/views/galleries/show.haml
 
-=======
-=======
           = link_to ( image_tag gallery.image, :width => 100, :height => 100), gallery.image.url
->>>>>>> 88160cf312e3deea8b89ba90337c2c1c671babc0:app/views/galleries/show.haml
           
->>>>>>> 9ddce6616733a28c6c44834d70dd485b0a1146a9:app/views/galleries/show.haml.kill
   - if current_user
     = link_to 'Rediger', edit_gallery_path(@gallery)
     |
