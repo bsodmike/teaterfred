@@ -1,18 +1,18 @@
 !!!
 %html
-	%head
+  %head
     %title Teaterforeningen Fredensborg Kommune
 
-	= stylesheet_link_tag "application"
-	= javascript_include_tag "application"
-	= javascript_include_tag '//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js', '//ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js', 'jquery.lightbox-0.5.min.js',
-	'fullcalendar',
-	'jquery.qtip.min',
-	'try'
-	= csrf_meta_tags
+    = stylesheet_link_tag "application"
+    = javascript_include_tag "application"
+    = javascript_include_tag '//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js', '//ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js', 'jquery.lightbox-0.5.min.js',
+    'fullcalendar',
+    'jquery.qtip.min',
+    'try'
+    = csrf_meta_tags
 	
-	%body
-      .container
+  %body
+    .container
 
       #header
         = render 'layouts/header'
