@@ -1,18 +1,4 @@
 - @news.each do |news|
-  %span{:style => "float:left;width: 600px;"}
-    = image_tag "/images/alder_ingen_hindring.jpg", :width => 140, :height => 110
-    %br/
-    %strong= news.title
-    %br/
-    = news.created_at
-    \-
-    = news.place
-    %br/
-    %br/
-    = truncate news.content, :length => 90
-    = link_to 'læs mere', news
-
-  %br/
   .news
     = image_tag news.image, :width => 180, :height => 150, :style => 'float:left;margin-right: 10px;' if news.image?
    
