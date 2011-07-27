@@ -2,24 +2,24 @@
 - @news_items.each do |news_item|
   .news
     = image_tag news_item.image, :width => 180, :height => 150, :style => 'float:left;margin-right: 10px;' if news_item.image?
-  %br/
-  .news_content{:style => 'float:left;width: 300px;'}
-    = raw (RedCloth.new(news_item.title).to_html)
     %br/
-    = news_item.created_at.strftime('%d/%m/%y')
-    \-
-    = news_item.place
-    %br/
-    %br/
-    = raw (RedCloth.new(news_item.content).to_html)
-    %br/
-    %br/
+    .news_content{:style => 'float:left;width: 300px;'}
+      = raw (RedCloth.new(news_item.title).to_html)
+      %br/
+      = news_item.created_at.strftime('%d/%m/%y')
+      \-
+      = news_item.place
+      %br/
+      %br/
+      = raw (RedCloth.new(news_item.content).to_html)
+      %br/
+      %br/
 
-    - if current_user
-      .admin_box{:style => 'width: 120px;text-align:center;'}
-        = link_to 'Vis', news_item
-        = link_to 'Rediger', edit_news_item_path(news_item)
-        = link_to 'Slet', news_item, confirm: 'Er du sikker?', method: :delete
-      
-    %br/
-    %br/
+      - if current_user
+        .admin_box{:style => 'width: 120px;text-align:center;'}
+          = link_to 'Vis', news_item
+          = link_to 'Rediger', edit_news_item_path(news_item)
+          = link_to 'Slet', news_item, confirm: 'Er du sikker?', method: :delete
+
+      %br/
+      %br/
