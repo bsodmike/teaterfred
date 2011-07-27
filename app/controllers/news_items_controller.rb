@@ -1,7 +1,7 @@
 class NewsItemsController < ApplicationController
   
   def index
-    @news_items = NewsItem.all
+    @news_items = NewsItem.order("created_at DESC").all
   end
   
   def show
