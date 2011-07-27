@@ -3,7 +3,7 @@ class PagesController < ApplicationController
 
   def index
     @page_title = 'Index'
-    @news = NewsItem.order("created_at").all
+    @news = NewsItem.order("created_at DESC").all
   end
 
   def contact
