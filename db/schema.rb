@@ -25,9 +25,12 @@ ActiveRecord::Schema.define(:version => 20110715095315) do
     t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
+<<<<<<< HEAD
     t.date     "published_on"
     t.string   "start"
+=======
     t.string   "published_on"
+>>>>>>> 88160cf312e3deea8b89ba90337c2c1c671babc0
   end
 
   create_table "galleries", :force => true do |t|
