@@ -17,6 +17,7 @@ gem 'carrierwave'
 gem 'RedCloth'
 
 group :production do
+  gem 'therubyracer-heroku'
   gem 'pg'
 end
 
