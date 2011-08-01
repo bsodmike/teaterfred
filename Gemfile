@@ -11,6 +11,7 @@ gem 'sprockets', "2.0.0.beta.12"
 gem 'jquery-rails'
 # End
 gem 'carrierwave'
+gem 'flash_cookie_session'
 
 gem 'RedCloth'
 

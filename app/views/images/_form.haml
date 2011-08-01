@@ -1,3 +1,5 @@
+/- key = Rails.application.config.session_options[:key]
+
 = form_for @image, :html => { :class => "upload", :multipart => true} do |f|
   %table
     %tr
@@ -10,9 +12,18 @@
         %small Hvis listen er blank, så er der ingen gallerier oprettet.
     %tr
       %td= f.label :billede
-      %td= f.file_field :image, :rel => images_path(@image)
+      %td=  # f.file_field :image, :rel => images_path(@image)
+    %tr
+      %td= f.file_field :image, :id => 'image'
+      
     %tr
       %td
       %td
         = f.submit 'Opret'
-      
+
+
+  %div
+    #filelist
+    %br/
+    %a#pickfiles{:href => "#"} [Select files]
+    %a#uploadfiles{:href => "#"} [Upload files]
