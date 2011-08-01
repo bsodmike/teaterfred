@@ -68,7 +68,7 @@ $(function() {
   }
   
   var uploader = new plupload.Uploader({
-    runtimes : ",silverlight,flash,html5",
+    runtimes : "silverlight,flash,html5",
     browse_button : 'pickfiles',
     max_file_size : '2mb',
     url : "<%= images_path %>",
