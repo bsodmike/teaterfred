@@ -71,7 +71,9 @@ $(function() {
     runtimes : ",silverlight,flash,html5",
     browse_button : 'pickfiles',
     max_file_size : '2mb',
-    url : "/assets",
+    url : "<%= images_path %>",
+    flash_swf_url: "/javascripts/plupload/plupload.flash.swf",
+    silverlight_xap_url: "/javascripts/plupload/plupload.silverlight.xap",
     multipart: true,
     multipart_params: {
      "authenticity_token" : '<%= form_authenticity_token %>'
