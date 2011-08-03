@@ -13,6 +13,7 @@ gem 'haml'
 gem 'jquery-rails'
 # End
 gem 'carrierwave'
+gem 'flash_cookie_session'
 
 gem 'RedCloth'
 

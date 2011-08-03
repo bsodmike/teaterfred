@@ -1,3 +1,5 @@
+/- key = Rails.application.config.session_options[:key]
+
 = form_for @image, :html => { :class => "upload", :multipart => true} do |f|
   %table
     %tr
@@ -7,12 +9,24 @@
       %td= f.label :galleri
       %td= f.select(:gallery_id, @gallery.map { |g| [g.title, g.id]}) # "maps" the @gallery instance variable, making it available
       %td
-        %small Hvis listen er blank, så er der ingen gallerier oprettet.
+        %small Hvis listen er blank, så er der ingen gallerier oprettet. Opret derfor et galleri.
     %tr
       %td= f.label :billede
       %td= f.file_field :image, :rel => images_path(@image)
     %tr
       %td
+
+      
+    %tr
+      %td
       %td
         = f.submit 'Opret'
-      
+
+
+= #plupload(@image, :create, options={:plupload_container=>'uploader'})
+%div{:id => "uploader", :name => "uploader", :style => "width: 100%;"}
+  %div
+    #filelist
+    %br/
+    %a#pickfiles{:href => "#"} [Select files]
+    %a#uploadfiles{:href => "#"} [Upload files]

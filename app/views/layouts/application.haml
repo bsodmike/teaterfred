@@ -2,15 +2,18 @@
 %html
   %head
     %title Teaterforeningen Fredensborg Kommune
-
     = stylesheet_link_tag "application"
     = javascript_include_tag "application"
-    = javascript_include_tag '//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js', '//ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js', 
-    'jquery.lightbox-0.5.min.js',
+    = javascript_include_tag '//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js', '//ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js', '//ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js',
+    'jquery.lightbox-0.5.min',
     'fullcalendar',
     'jquery.qtip.min',
-    'try'
+    'try',
+    'plupload/plupload.full',
+    'plupload/plupload.js'
+
     = csrf_meta_tags
+    
 	
   %body
     .container

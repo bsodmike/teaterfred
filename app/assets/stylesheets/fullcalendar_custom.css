@@ -8,13 +8,13 @@ th.fc-state-default{height:20px;color:#000;font-family:Arial, Helvetica, sans-se
 .fc-grid .fc-day-number {float:left!important;padding:0!important;}
 td.fc-other-month .fc-day-content{color:#ECECEC} 
 .fc-header-title{font-family:Arial, Helvetica, sans-serif;text-align:center;font-size:12px;color:#000;text-transform:uppercase}
-td.has-event {background:url(../img/calendar/calendarDateBgRed.png) no-repeat center top!important;color:#000!important }
+td.has-event {background:url(calendar/calendarDateBgRed.png) no-repeat center top!important;color:#000!important }
 .fc-grid .fc-day-content {padding:0px!important;float:none}
 /*.fc-today .fc-day-number{background:url(../img/calendar/calendarCurrentDateBg.png) no-repeat 5px 2px}*/
 .fc-event, .fc-agenda .fc-event-time, .fc-event a {border:none!important;background:none!important}
 .fc-event-title {color:#000;}
 
-.fc-event a {background:url(../img/calendar/eventDateIndicator.png) no-repeat scroll 24px 17px transparent !important;
+.fc-event a {background:url(calendar/eventDateIndicator.png) no-repeat scroll 24px 17px transparent !important;
 	height:43px!important;
 	left:-2px;
 	position:absolute!important;text-indent:-9999px;
@@ -28,9 +28,9 @@ td.has-event {background:url(../img/calendar/calendarDateBgRed.png) no-repeat ce
 .fc-button-inner{border:none!important; background:none!important;}
 .fc-button-content{color:transparent!important;line-height:0;}
 /* button styling*/
-.fc-button-prev span.fc-button-content{background:url(../img/calendar/calenderLeftArrow.png) no-repeat left center!important;border:none!important;text-indent:-9999px;width:8px;}	
-.fc-button-prev span.fc-button-content:hover{background:url(../img/calendar/calenderLeftArrowHover.png) no-repeat left center!important}
+.fc-button-prev span.fc-button-content{background:url(calendar/calenderLeftArrow.png) no-repeat left center!important;border:none!important;text-indent:-9999px;width:8px;}	
+.fc-button-prev span.fc-button-content:hover{background:url(calendar/calenderLeftArrowHover.png) no-repeat left center!important}
 .fc-button-prev  a{border:none!important}
-.fc-button-next span.fc-button-content{background:url(../img/calendar/calenderRightArrow.png) no-repeat left center!important;border:none!important;text-indent:-9999px;width:8px;}	
-.fc-button-next span.fc-button-content:hover{background:url(../img/calendar/calenderRightArrowHover.png) no-repeat left center!important;}
+.fc-button-next span.fc-button-content{background:url(calendar/calenderRightArrow.png) no-repeat left center!important;border:none!important;text-indent:-9999px;width:8px;}	
+.fc-button-next span.fc-button-content:hover{background:url(calendar/calenderRightArrowHover.png) no-repeat left center!important;}
 .fc-button-next  a{border:none!important} 
