@@ -1,13 +1,6 @@
 %h3 Billeder
+
 - @images.each do |image|
   .image_box{:style => 'float:left;margin-right:4px;'}
-    = link_to ( image_tag image.image, :width => 100, :height => 100 ) if image.image?
-      - if current_user
-        .admin_box
-          = link_to 'Vis', image
-          = link_to 'Rediger', edit_image_path(image)
-          = link_to 'Slet', image, confirm: 'Are you sure?', method: :delete
-  %br/
-  - if current_user
-    .admin_box
-      = link_to 'Nyt billede', new_image_path
+    = link_to ( image_tag image.image, :width => 100, :height => 100) if image.image?
+  
