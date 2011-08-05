@@ -9,7 +9,7 @@
   - @galleries.each do |gallery|
     %tr
       %td{:colspan => '4'}
-        %h4= link_to gallery.name, gallery
+        %h4= link_to gallery.title, gallery
         = gallery.place
         %br/
         = gallery.created_at.strftime('%d/%m/%y')
