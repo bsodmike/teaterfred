@@ -7,7 +7,7 @@ $(function() {
   $("#event_published_on").datepicker();
   $("#event_start").datepicker();
 
-  $(".images a").lightBox();
+  $(".image").lightBox();
 
   $('#calendar').fullCalendar({
       // see http://arshaw.com/fullcalendar/docs
