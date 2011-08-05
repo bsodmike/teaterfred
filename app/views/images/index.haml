@@ -8,7 +8,7 @@
   - @images.each do |image|
     %tr
       %td= image.title
-      %td= image.try(:gallery).try(:name)
+      %td= image.gallery.name if image.gallery.name?
       - if current_user
         .admin_box{:style => 'width:120px;text-align:center;'}
           %td= link_to 'Vis', image

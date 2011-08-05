@@ -1,14 +1,10 @@
 class ImagesController < ApplicationController
   before_filter :signed_in_user, :only => [:new, :create, :edit, :update, :destroy]
-  #before_filter :find_property
-  #before_filter :find_or_build_photo
-  skip_before_filter :verify_authenticity_token
   
   respond_to :html, :json, :xml
 
   def index
     @images = Image.all
-    #render :json => @images.collect { |i| i.to_jq_upload }.to_json
   end
   
   def show
@@ -30,10 +26,8 @@ class ImagesController < ApplicationController
 
     if @image.save
       redirect_to(@image, :notice => 'Billedet blev oprettet')
-      #render :json => [ @image.to_jq_upload].to_json
     else
       render :new, :error => 'Billedet blev ikke oprettet'
-      #render :json => [@image.to_jq_upload.merge({:error => "custom_failure"})].to_json
     end
   end
 
