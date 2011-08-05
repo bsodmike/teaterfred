@@ -2,5 +2,7 @@
 
 - @gallery.images.each do |gallery|
   .image_box{:style => 'float:left;margin-right:4px;'}
-    = link_to ( image_tag gallery.image, :width => 100, :height => 100) if gallery.image?
+    %a{:href => gallery.image, :class => 'image'}
+      = image_tag gallery.image, :width => 100, :height => 100 if gallery.image?
+
 
