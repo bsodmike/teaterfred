@@ -6,9 +6,10 @@
         %td= gallery.title
         %td.image_box
 
-          = link_to ( image_tag gallery.image, :width => 100, :height => 100), gallery.image.url
+          = link_to ( image_tag gallery.image, :width => 100, :height => 100), gallery.image.url if gallery.image?
           
   - if current_user
-    = link_to 'Rediger', edit_gallery_path(@gallery)
-    |
-    = link_to 'Tilbage', galleries_path
+    .admin_box
+      = link_to 'Rediger', edit_gallery_path(@gallery)
+      |
+      = link_to 'Tilbage', galleries_path
