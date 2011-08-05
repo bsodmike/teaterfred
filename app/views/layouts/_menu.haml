@@ -40,7 +40,7 @@
   %h4= link_to 'Galleri', galleries_path
   %div
     - Gallery.all.each do |gallery|
-      = link_to gallery.title, gallery
+      = link_to gallery.name, gallery
       %br/
   
   %h4= link_to 'Kontakt', contact_path

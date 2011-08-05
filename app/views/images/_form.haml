@@ -7,7 +7,7 @@
       %td= f.text_field :title
     %tr
       %td= f.label :galleri
-      %td= f.select(:gallery_id, @gallery.map { |g| [g.title, g.id]}) if @gallery.map? # "maps" the @gallery instance variable, making it available
+      %td= f.select(:gallery_id, @gallery.map { |g| [g.name, g.id]})  # "maps" the @gallery instance variable, making it available
       %td
         %small Hvis listen er blank, så er der ingen gallerier oprettet. Opret derfor et galleri.
     %tr

@@ -1,6 +1,6 @@
 - @news.each do |news|
   .news
-    = image_tag news.image, :width => 180, :height => 150, :style => 'float:left;margin-right: 10px;', :class => 'lightbox' if news.image?
+    = image_tag news.image, :width => 180, :height => 150, :style => 'float:left;margin-right: 10px;' if news.image?
    
     .news_content{:style => 'float:left;width: 300px;'}
       = raw(RedCloth.new(news.title).to_html)
