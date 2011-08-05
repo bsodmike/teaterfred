@@ -3,11 +3,13 @@ source 'http://rubygems.org'
 gem 'rails', '3.1.0.rc5'
 
 # Asset template engines
-gem 'sass-rails', "~> 3.1.0.rc"
-gem 'coffee-script'
-gem 'uglifier'
+group :assets do
+  gem 'sass-rails', "~> 3.1.0.rc"
+  gem 'coffee-script'
+  gem 'uglifier'
+end
+
 gem 'haml'
-gem 'sprockets', "2.0.0.beta.12"
 gem 'jquery-rails'
 # End
 gem 'carrierwave'
@@ -16,7 +18,7 @@ gem 'flash_cookie_session'
 gem 'RedCloth'
 
 group :production do
-  gem 'therubyracer-heroku', '0.8.1.pre3'
+  gem 'therubyracer-heroku'
   gem 'pg'
 end
 

@@ -31,9 +31,6 @@ class ImagesController < ApplicationController
     if @image.save
       redirect_to(@image, :notice => 'Billedet blev oprettet')
       #render :json => [ @image.to_jq_upload].to_json
-      format.js do
-        render :text => render_to_string(:partial => 'photos/photo', :locals => {:photo => @photo})
-      end
     else
       render :new, :error => 'Billedet blev ikke oprettet'
       #render :json => [@image.to_jq_upload.merge({:error => "custom_failure"})].to_json
@@ -52,8 +49,6 @@ class ImagesController < ApplicationController
   def destroy
     @image = Image.find(params[:id])
     @image.destroy
-    #render :json => true
-    format.js
     redirect_to(images_url)
   end
   
