@@ -1,12 +1,9 @@
 %p
-  %table
-    %tr
-      - @gallery.images.each do |gallery|
-        %td
-          = gallery.title
-          %br/
-          .image_box
-            = link_to ( image_tag gallery.image, :width => 100, :height => 100), gallery.image.url if gallery.image?
+  - @gallery.images.each do |gallery|
+    = gallery.title
+    %br/
+    .image_box
+      = link_to ( image_tag gallery.image, :width => 100, :height => 100), gallery.image.url if gallery.image?
           
   - if current_user
     .admin_box
