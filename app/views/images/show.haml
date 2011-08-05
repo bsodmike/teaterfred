@@ -3,12 +3,11 @@
   = @image.title
 %p
   %b Galleri:
-  = @image.try(:gallery).try(:name)
+  = link_to @image.gallery.title, @image.gallery
 %p
-  %b Billede:
   %br/
-  = image_tag @image.image, :width => 100, :height => 100
-
+  .image_box
+    = link_to ( image_tag @image.image, :width => 100, :height => 100 )
 - if current_user
   .admin_box
     = link_to 'Rediger', edit_image_path(@image)

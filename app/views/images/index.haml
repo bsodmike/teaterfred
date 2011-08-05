@@ -8,12 +8,14 @@
   - @images.each do |image|
     %tr
       %td= image.title
-      %td=# image.gallery.name if image.gallery.name?
-      - if current_user
-        .admin_box{:style => 'width:120px;text-align:center;'}
-          %td= link_to 'Vis', image
-          %td= link_to 'Rediger', edit_image_path(image)
-          %td= link_to 'Slet', image, confirm: 'Are you sure?', method: :delete
+      %td= image.gallery.title if image.gallery.title?
+      %td
+        - if current_user
+          .admin_box
+            = link_to 'Vis', image
+            = link_to 'Rediger', edit_image_path(image)
+            = link_to 'Slet', image, confirm: 'Are you sure?', method: :delete
 %br/
 - if current_user
-  = link_to 'Nyt billede', new_image_path
+  .admin_box
+    = link_to 'Nyt billede', new_image_path
