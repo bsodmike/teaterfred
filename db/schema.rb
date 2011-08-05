@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(:version => 20110715095315) do
   end
 
   create_table "galleries", :force => true do |t|
-    t.string   "name"
+    t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "place"
