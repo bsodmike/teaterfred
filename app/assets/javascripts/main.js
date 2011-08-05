@@ -7,7 +7,7 @@ $(function() {
   $("#event_published_on").datepicker();
   $("#event_start").datepicker();
 
-  $(".image_box a").lightBox();
+  $(".images a").lightBox();
 
   $('#calendar').fullCalendar({
       // see http://arshaw.com/fullcalendar/docs
@@ -67,37 +67,4 @@ $(function() {
       $("#calendar").fullCalendar('rerenderEvents');
   }
   
-  var uploader = new plupload.Uploader({
-    runtimes : "silverlight,flash,html5",
-    browse_button : 'pickfiles',
-    max_file_size : '2mb',
-    url : "<%= images_path %>",
-    flash_swf_url: "/javascripts/plupload/plupload.flash.swf",
-    silverlight_xap_url: "/javascripts/plupload/plupload.silverlight.xap",
-    multipart: true,
-    multipart_params: {
-     "authenticity_token" : '<%= form_authenticity_token %>'
-    }
-  });
-
-  uploader.bind('FilesAdded', function(up, files) {
-    $.each(files, function(i, file) {
-      $('#filelist').append(
-        '<div id="' + file.id + '">' +
-        'File: ' + file.name + ' (' + plupload.formatSize(file.size) + ') <b></b>' +
-        '</div>'
-        );
-      });
-    });
-
-  uploader.bind('UploadProgress', function(up, file) {
-    $('#' + file.id + " b").html(file.percent + "%");
-  });
-
-  $('#uploadfiles').click(function(e) {
-    uploader.start();
-    e.preventDefault();
-  });
-
-  uploader.init();
 });
