@@ -12,7 +12,7 @@
         %h4= link_to gallery.title, gallery
         = gallery.place
         %br/
-        = gallery.created_at
+        = gallery.created_at.strftime('%d/%m/%y')
     %tr
     %tr
       - gallery.images.each do |image|

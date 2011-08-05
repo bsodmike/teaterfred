@@ -21,7 +21,7 @@ class GalleriesController < ApplicationController
     @gallery = Gallery.new(params[:gallery])
 
     if @gallery.save
-      redirect_to(@gallery, :notice => 'NGalleriet blev oprettet')
+      redirect_to(@gallery, :notice => 'Galleriet blev oprettet')
     else
       render :new, :error => 'Galleriet blev ikke oprettet'
     end
