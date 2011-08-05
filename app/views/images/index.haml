@@ -4,4 +4,9 @@
     .image_box{:style => 'float:left;margin-right:4px;'}
       = link_to image do
         = image_tag image.image, :width => 100, :height => 100, :class => 'image'
+      - if current_user
+        .admin_box{:style => 'width: 120px;text-align:center;'}
+          = link_to 'Vis', image
+          = link_to 'Rediger', edit_image_path(image)
+          = link_to 'Slet', image, confirm: 'Er du sikker?', method: :delete
   
