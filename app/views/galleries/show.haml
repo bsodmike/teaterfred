@@ -3,7 +3,7 @@
     = gallery.title
     %br/
     .image_box
-      = link_to ( image_tag gallery.image, :width => 100, :height => 100), gallery.image.url if gallery.image?
+      = link_to ( image_tag gallery.image, :width => 100, :height => 100), gallery.image if gallery.image?
           
   - if current_user
     .admin_box
