@@ -7,7 +7,7 @@
           = link_to 'Vis', image
           = link_to 'Rediger', edit_image_path(image)
           = link_to 'Slet', image, confirm: 'Are you sure?', method: :delete
-%br/
-- if current_user
-  .admin_box
-    = link_to 'Nyt billede', new_image_path
+  %br/
+  - if current_user
+    .admin_box
+      = link_to 'Nyt billede', new_image_path
