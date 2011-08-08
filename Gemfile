@@ -17,6 +17,8 @@ gem 'flash_cookie_session'
 
 gem 'RedCloth'
 
+gem 'fog'
+
 group :production do
   gem 'therubyracer-heroku'
   gem 'pg'

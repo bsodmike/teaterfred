@@ -54,10 +54,22 @@ GEM
     erubis (2.7.0)
     eventmachine (1.0.0.beta.3)
     eventmachine (1.0.0.beta.3-x86-mingw32)
+    excon (0.6.5)
     execjs (1.2.1)
       multi_json (~> 1.0)
     flash_cookie_session (1.1.1)
       rails (~> 3.0)
+    fog (0.10.0)
+      builder
+      excon (~> 0.6.5)
+      formatador (~> 0.2.0)
+      mime-types
+      multi_json (~> 1.0.3)
+      net-scp (~> 1.0.4)
+      net-ssh (~> 2.1.4)
+      nokogiri (~> 1.5.0)
+      ruby-hmac
+    formatador (0.2.0)
     gherkin (2.4.5)
       json (>= 1.4.6)
     gherkin (2.4.5-x86-mingw32)
@@ -75,6 +87,11 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.16)
     multi_json (1.0.3)
+    net-scp (1.0.4)
+      net-ssh (>= 1.99.1)
+    net-ssh (2.1.4)
+    nokogiri (1.5.0)
+    nokogiri (1.5.0-x86-mingw32)
     pg (0.11.0)
     pg (0.11.0-x86-mingw32)
     polyglot (0.3.2)
@@ -117,6 +134,7 @@ GEM
       activesupport (~> 3.0)
       railties (~> 3.0)
       rspec (~> 2.6.0)
+    ruby-hmac (0.4.0)
     sass (3.1.5)
     sass-rails (3.1.0.rc.5)
       actionpack (~> 3.1.0.rc1)
@@ -162,6 +180,7 @@ DEPENDENCIES
   cucumber
   eventmachine (= 1.0.0.beta.3)
   flash_cookie_session
+  fog
   haml
   jquery-rails
   pg
