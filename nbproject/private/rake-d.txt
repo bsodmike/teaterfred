@@ -47,6 +47,7 @@ doc\:clobber_plugins=
 doc\:clobber_rails=
 doc\:guides=
 doc\:plugins=
+doc\:plugins\:plupload-rails3=
 doc\:rails=
 doc\:reapp=
 doc\:rerails=

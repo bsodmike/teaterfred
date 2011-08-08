@@ -19,6 +19,7 @@ class ImagesController < ApplicationController
   
   def edit
     @image = Image.find(params[:id])
+    @gallery = Gallery.all
   end
 
   def create    
